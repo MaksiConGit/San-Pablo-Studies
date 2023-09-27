@@ -1,5 +1,7 @@
 body{
     background-color: #2B2B2B;
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 15px;
 }
 
 /* Estilos para el menú lateral */
@@ -19,8 +21,10 @@ body{
     padding: 0;
 }
 
-#menu ul li {
-    margin-bottom: 10px;
+#menu li {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    margin-bottom: 10px; /* Agrega un espacio entre cada elemento del menú */
 }
 
 #menu ul li a {
@@ -30,6 +34,12 @@ body{
 
 #menu ul li:hover{
     background-color: black;
+}
+
+#menu ul li img{
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
 }
 
 /* Estilos para la barra superior */
@@ -57,7 +67,7 @@ body{
 }
 
 #imgPerfil{
-    width: 40px;
+    width: 30px;
     border-radius: 50%;
 }
 
