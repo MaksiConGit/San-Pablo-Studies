@@ -1,0 +1,66 @@
+body{
+    background-color: #2B2B2B;
+}
+
+/* Estilos para el menú lateral */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #202020;
+    color: #fff;
+    padding: 20px;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu ul li {
+    margin-bottom: 10px;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#menu ul li:hover{
+    background-color: black;
+}
+
+/* Estilos para la barra superior */
+#barraSup{
+    background-color: #202020;
+    color: #fff;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex; /* Utilizamos flexbox para controlar la disposición */
+    justify-content: flex-start; /* Alinea los elementos al principio del div */
+    align-items: center; /* Alinea verticalmente los elementos al centro (opcional) */
+}
+
+#barraSup span{
+    margin-left: auto;
+    padding-right: 15px;
+}
+
+#imgSPS{
+    width: 100px;
+    padding-left: 15px;
+}
+
+#imgPerfil{
+    width: 40px;
+    border-radius: 50%;
+}
+
+#ciruja{
+    width: 15px;
+}
