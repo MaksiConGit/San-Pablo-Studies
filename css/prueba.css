@@ -1,0 +1,18 @@
+#contenedor {
+    background-color: black;
+    height: 500px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#div1 {
+    background-color: #ccc;
+    padding: 10px;
+}
+
+#div2 {
+    background-color: #f0f0f0;
+    padding: 10px;
+}

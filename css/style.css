@@ -13,33 +13,50 @@ body{
     height: 100%;
     background-color: #202020;
     color: #fff;
-    padding: 20px;
-}
-
-#menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-#menu li {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos en el centro */
-    margin-bottom: 10px; /* Agrega un espacio entre cada elemento del menú */
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 7px;
+    padding-left: 7px;
 }
 
-#menu ul li a {
+#menu a {
     text-decoration: none;
     color: #fff;
 }
 
-#menu ul li:hover{
+#menu a:hover{
     background-color: black;
 }
 
-#menu ul li img{
-    width: 20px;
-    height: 20px;
-    margin-right: 7px;
+#menu img{
+    width: 22px; /* Establece el ancho deseado para el ícono */
+    height: 22px; /* Establece la altura deseada para el ícono */
+    margin-right: 10px; /* Agrega un espacio a la derecha del ícono */
+}
+
+#opciones1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+#opciones2{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7px;
+}
+
+#opciones1 div{
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    padding-bottom: 10px;
+}
+
+#opciones2 div{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
 /* Estilos para la barra superior */
