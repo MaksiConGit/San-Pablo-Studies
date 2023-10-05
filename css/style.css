@@ -17,16 +17,12 @@ body{
     flex-direction: column;
     justify-content: space-between;
     padding-top: 7px;
-    padding-left: 7px;
+    /* padding-left: 7px; */
 }
 
 #menu a {
     text-decoration: none;
     color: #fff;
-}
-
-#menu a:hover{
-    background-color: black;
 }
 
 #menu img{
@@ -47,11 +43,20 @@ body{
     margin-bottom: 7px;
 }
 
-#opciones1 div{
+#opciones1 div {
+    background:
+      linear-gradient(#000 0 0) 
+      left /var(--d, 0%) 100% no-repeat;
+    transition: 0.2s;
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos en el centro */
-    padding-bottom: 10px;
-}
+    align-items: center;
+    height: 40px;
+    padding-left: 7px;
+  }
+#opciones1 div:hover {
+    --d: 100%;
+    color: #fff;
+  }
 
 #opciones2 div{
     display: flex;
