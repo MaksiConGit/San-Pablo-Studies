@@ -40,7 +40,7 @@ body{
 #opciones2{
     display: flex;
     flex-direction: column;
-    margin-bottom: 7px;
+    margin-bottom: 13px;
 }
 
 #opciones1 div {
@@ -59,10 +59,20 @@ body{
   }
 
 #opciones2 div{
+    background:
+      linear-gradient(#000 0 0) 
+      left /var(--d, 0%) 100% no-repeat;
+    transition: 0.2s;
     display: flex;
     align-items: center;
-    padding-bottom: 10px;
+    height: 40px;
+    padding-left: 7px;
 }
+
+#opciones2 div:hover {
+    --d: 100%;
+    color: #fff;
+  }
 
 /* Estilos para la barra superior */
 #barraSup{
