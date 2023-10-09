@@ -56,6 +56,7 @@ body{
 #opciones1 div:hover {
     --d: 100%;
     color: #fff;
+    cursor: pointer;
   }
 
 #opciones2 div{
@@ -72,6 +73,7 @@ body{
 #opciones2 div:hover {
     --d: 100%;
     color: #fff;
+    cursor: pointer;
   }
 
 /* Estilos para la barra superior */
