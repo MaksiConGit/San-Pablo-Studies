@@ -6,7 +6,6 @@
         <title>San Pablo Studies</title>
         <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        <script src="js/main.js"></script>
     </head>
     <body>
         
@@ -14,42 +13,42 @@
 
             <div id="opciones1">
 
-                <div>
+                <div class="opciones_laterales">
                     <img src="img/calendario.png" alt="">
                     <a>Calendario</a>
                 </div>
 
-                <div>
+                <div class="opciones_laterales">
                     <img src="img/horarios.png" alt="">
                     <a">Horarios</a>
                 </div>
 
             
-                <div>
+                <div class="opciones_laterales">
                     <img src="img/biblioteca.png" alt="">
                     <a>Biblioteca</a>
                 </div>
 
             
-                <div>
+                <div class="opciones_laterales">
                     <img src="img/asistencia.png" alt="">
                     <a>Asistencia</a>
                 </div>
 
             
-                <div>
+                <div class="opciones_laterales">
                     <img src="img/notas.png" alt="">
                     <a>Notas</a>
                 </div>
 
             
-                <div>
+                <div class="opciones_laterales">
                     <img src="img/carpetas.png" alt="">
                     <a>Carpetas</a>
                 </div>
 
             
-                <div>
+                <div class="opciones_laterales">
                     <img src="img/resumenes.png" alt="">
                     <a>Resúmenes</a>
                 </div>
@@ -58,12 +57,12 @@
 
             <div id="opciones2">
 
-                <div>        
+                <div class="opciones_laterales">        
                     <img src="img/ajustes.png" alt="Opción 4">
                     <a>Configuración</a>
                 </div>
             
-                <div>
+                <div class="opciones_laterales">
                     <img src="img/bug.png" alt="Opción 5">
                     <a>Reportar error</a>
                 </div>
@@ -83,18 +82,19 @@
 
         <div id="contenido">
 
-            <div id="calendario"></div>
-            <div id="horarios"></div>
-            <div id="biblioteca"></div>
-            <div id="asistencia"></div>
-            <div id="notas"></div>
-            <div id="carpetas"></div>
-            <div id="resumenes"></div>
-            <div id="configuracion"></div>
-            <div id="resumenes"></div>
+            <div id="calendario" class="contenido_mostrado"><h2>Calendario</h2></div>
+            <div id="horarios" class="contenido_mostrado"><h2>Horarios</h2></div>
+            <div id="biblioteca" class="contenido_mostrado"><h2>Biblioteca</h2></div>
+            <div id="asistencia" class="contenido_mostrado"><h2>Asistencia</h2></div>
+            <div id="notas" class="contenido_mostrado"><h2>Notas</h2></div>
+            <div id="carpetas" class="contenido_mostrado"><h2>Carpetas</h2></div>
+            <div id="resumenes" class="contenido_mostrado"><h2>Resúmenes</h2></div>
+            <div id="configuracion" class="contenido_mostrado"><h2>Configuración</h2></div>
+            <div id="bug" class="contenido_mostrado"><h2>Reportar bug</h2></div>
 
         </div>
 
+        <script src="js/main.js"></script>
     </body>
 
 </html>
