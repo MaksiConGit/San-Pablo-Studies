@@ -108,3 +108,10 @@ body{
 #ciruja{
     width: 15px;
 }
+
+/* Contenido */
+#contenido{
+    display: flex;
+    margin-top: 60px;
+    margin-left: 150px;
+}
