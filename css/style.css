@@ -156,6 +156,10 @@ body{
 }
 
 #dias-horarios div .sin-clases{
+    background-color: #AAAAAA;
+}
+
+#dias-horarios div .horarios{
     background-color: #3A3A3A;
 }
 
