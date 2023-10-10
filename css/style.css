@@ -168,6 +168,28 @@ body{
     margin-bottom: 10px;
 }
 
+#lista-eventos{
+    background-color: #202020;
+    height: 130px;
+    width: 500px;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+
 #lista-eventos div{
-    display: flex;
+    padding: 8px;
+}
+
+#lista-eventos div:hover{
+    cursor: pointer;
+}
+
+.fecha-evento{
+    margin-left: 10px;
+    margin-right: 20px;
+    font-family: 'Roboto Medium', sans-serif;
+}
+
+.nombre-evento{
+    font-size: 20px;
 }
