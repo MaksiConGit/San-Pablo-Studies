@@ -4,7 +4,10 @@ const opciones = document.getElementsByClassName("opciones_laterales");
 
 for (let i = 0; i < opciones.length; i++) {
 
+  // Quitar esta línea al terminar la branch
     contenidos[i].style.display = "none";
+
+    contenidos[0].style.display = "block"
 
     opciones[i].addEventListener("click", function () {
 
