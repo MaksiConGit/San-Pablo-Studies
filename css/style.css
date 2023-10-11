@@ -133,34 +133,59 @@ body{
     padding-right: 30px;
 }
 
-#calendario-titulos{
+#biblioteca-titulos{
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 19px;
 }
 
-#dias-calendario{
-    display: flex;
+#pdfs-biblioteca{
     justify-content: space-around;
     margin-left: 70px;
     margin-right: 70px;
     margin-bottom: 15px;
 }
 
-#dias-calendario div div{
+#pdfs-biblioteca .div-materia{
+    display: flex;
+}
+
+#pdfs-biblioteca .div-materia div{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+}
+
+.div-materia div img{
+    width: 50px;
+    height: 50px;
+}
+
+#pdfs-biblioteca div div{
+    display: flex;
+    margin-right: 50px;
+}
+
+#pdfs-biblioteca div div:hover{
+    cursor: pointer;
+}
+
+#pdfs-biblioteca div div{
     background-color: #202020;
     width: 100px;
-    height: 50px;
-    margin-bottom: 5px;
-    padding: 5px
+    height: 60px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    padding: 5px;
 }
 
-#dias-calendario div .dia-otro-mes{
-    background-color: #3A3A3A;
+#pdfs-biblioteca span{
+    font-size: 18px;
 }
 
-#dias-calendario div span{
+#pdfs-biblioteca div span{
     display: flex;
     flex-direction: column; /* Coloca los elementos en columnas */
     align-items: center; /* Centra horizontalmente los elementos */
@@ -168,7 +193,7 @@ body{
     margin-bottom: 10px;
 }
 
-#lista-eventos{
+#filtros{
     background-color: #202020;
     height: 130px;
     width: 500px;
@@ -176,11 +201,11 @@ body{
     overflow-y: scroll;
 }
 
-#lista-eventos div{
+#filtros div{
     padding: 8px;
 }
 
-#lista-eventos div:hover{
+#filtros div:hover{
     cursor: pointer;
 }
 
