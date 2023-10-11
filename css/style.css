@@ -155,11 +155,13 @@ body{
 
 #pdfs-biblioteca hr{
     margin-top: 10px;
+    margin-bottom: 25px;
     width: 150px;
 }
 
 #pdfs-biblioteca .div-materia{
     display: flex;
+    justify-content: space-around;
 }
 
 .div-materia div img{
@@ -167,12 +169,45 @@ body{
     height: 50px;
 }
 
-#pdfs-biblioteca .div-materia div{
+#pdfs-biblioteca .div-materia .archivo{
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 45px;
+}
+
+#pdfs-biblioteca .div-materia .archivo:hover{
+    cursor: pointer;
+}
+
+
+#pdfs-biblioteca .div-materia .archivo .rect-img{
+    align-items: center;
+    justify-content: center;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
+    margin-bottom: 5px;
+}
+
+#pdfs-biblioteca .div-materia .archivo .nombre-archivo{
+    width: 110px;
+}
+
+#pdfs-biblioteca .div-materia .archivo .div-rectangulo{
+    background-color: #202020;
+    /* margin-right: 50px; */
+    /* margin-top: 25px; */
+    padding: 5px;
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pdfs-biblioteca .div-materia .flecha{
+    display: flex;
+    justify-content: center;
     align-items: center;
     margin-right: 50px;
-    background-color: #202020;
     width: 100px;
     height: 60px;
     margin-top: 25px;
@@ -192,11 +227,6 @@ body{
     margin-top: 3px;
     margin-bottom: 35px;
     padding: 5px;
-}
-
-
-#pdfs-biblioteca div div:hover{
-    cursor: pointer;
 }
 
 #pdfs-biblioteca span{
