@@ -120,3 +120,76 @@ body{
     margin-top: 60px;
     margin-left: 150px;
 }
+
+/* Calendario */
+
+#biblioteca{
+    width: 100%;
+    color: white;
+    display: flex;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+}
+
+#calendario-titulos{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#dias-calendario{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 15px;
+}
+
+#dias-calendario div div{
+    background-color: #202020;
+    width: 100px;
+    height: 50px;
+    margin-bottom: 5px;
+    padding: 5px
+}
+
+#dias-calendario div .dia-otro-mes{
+    background-color: #3A3A3A;
+}
+
+#dias-calendario div span{
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columnas */
+    align-items: center; /* Centra horizontalmente los elementos */
+    text-align: center; /* Centra horizontalmente el texto dentro de los rectángulos */
+    margin-bottom: 10px;
+}
+
+#lista-eventos{
+    background-color: #202020;
+    height: 130px;
+    width: 500px;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+
+#lista-eventos div{
+    padding: 8px;
+}
+
+#lista-eventos div:hover{
+    cursor: pointer;
+}
+
+.fecha-evento{
+    margin-left: 10px;
+    margin-right: 20px;
+    font-family: 'Roboto Medium', sans-serif;
+}
+
+.nombre-evento{
+    font-size: 20px;
+}
