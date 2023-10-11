@@ -210,29 +210,3 @@ body{
     text-align: center; /* Centra horizontalmente el texto dentro de los rectángulos */
     margin-bottom: 10px;
 }
-
-#filtros{
-    background-color: #202020;
-    height: 130px;
-    width: 500px;
-    margin-top: 10px;
-    overflow-y: scroll;
-}
-
-#filtros div{
-    padding: 8px;
-}
-
-#filtros div:hover{
-    cursor: pointer;
-}
-
-.fecha-evento{
-    margin-left: 10px;
-    margin-right: 20px;
-    font-family: 'Roboto Medium', sans-serif;
-}
-
-.nombre-evento{
-    font-size: 20px;
-}
