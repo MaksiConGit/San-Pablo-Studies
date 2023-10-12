@@ -121,7 +121,7 @@ body{
     margin-left: 150px;
 }
 
-/* Calendario */
+/* Carpetas */
 
 #carpetas{
     width: 100%;
@@ -133,7 +133,7 @@ body{
     padding-right: 30px;
 }
 
-#biblioteca-titulos{
+#carpetas-titulos{
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
@@ -141,57 +141,57 @@ body{
     font-size: 19px;
 }
 
-#pdfs-biblioteca{
+#div-carpetas{
     justify-content: space-around;
     margin-left: 70px;
     margin-right: 70px;
     margin-bottom: 15px;
 }
 
-#pdfs-biblioteca .nombre-materia{
+#div-carpetas .nombre-alumno{
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
 }
 
-#pdfs-biblioteca hr{
+#div-carpetas hr{
     margin-top: 10px;
     margin-bottom: 25px;
     width: 150px;
 }
 
-#pdfs-biblioteca .div-materia{
+#div-carpetas .div-alumno{
     display: flex;
     justify-content: space-around;
 }
 
-.div-materia div img{
+.div-alumno div img{
     width: 50px;
     height: 50px;
 }
 
-#pdfs-biblioteca .div-materia .archivo{
+#div-carpetas .div-alumno .archivo{
     justify-content: center;
     align-items: center; 
     margin-bottom: 45px;
 }
 
-#pdfs-biblioteca .div-materia .archivo:hover{
+#div-carpetas .div-alumno .archivo:hover{
     cursor: pointer;
 }
 
 
-#pdfs-biblioteca .div-materia .archivo .rect-img{
+#div-carpetas .div-alumno .archivo .rect-img{
     align-items: center;
     justify-content: center;
     display: flex;
     margin-bottom: 5px;
 }
 
-#pdfs-biblioteca .div-materia .archivo .nombre-archivo{
+#div-carpetas .div-alumno .archivo .nombre-archivo{
     width: 110px;
 }
 
-#pdfs-biblioteca .div-materia .archivo .div-rectangulo{
+#div-carpetas .div-alumno .archivo .div-rectangulo{
     background-color: #202020;
     /* margin-right: 50px; */
     /* margin-top: 25px; */
@@ -203,7 +203,7 @@ body{
     align-items: center;
 }
 
-#pdfs-biblioteca .div-materia .flecha{
+#div-carpetas .div-alumno .flecha{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,11 +214,11 @@ body{
     padding: 5px;
 }
 
-#pdfs-biblioteca .nombre-archivo{
+#div-carpetas .nombre-archivo{
     display: flex;
 }
 
-#pdfs-biblioteca .nombre-archivo div{
+#div-carpetas .nombre-archivo div{
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     margin-right: 50px;
@@ -229,11 +229,11 @@ body{
     padding: 5px;
 }
 
-#pdfs-biblioteca span{
+#div-carpetas span{
     font-size: 18px;
 }
 
-#pdfs-biblioteca div span{
+#div-carpetas div span{
     display: flex;
     flex-direction: column; /* Coloca los elementos en columnas */
     align-items: center; /* Centra horizontalmente los elementos */
