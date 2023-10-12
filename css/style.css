@@ -170,7 +170,7 @@ body{
 
 #lista-eventos{
     background-color: #202020;
-    height: 130px;
+    height: 300px;
     width: 500px;
     margin-top: 10px;
     overflow-y: scroll;
@@ -193,3 +193,35 @@ body{
 .nombre-evento{
     font-size: 20px;
 }
+
+#div-calendario{
+    display: flex;
+    justify-content: space-around;
+}
+
+table {
+    border-collapse: collapse;
+    /* width: 100%; */
+    background-color: #202020; /* Cambio de color de fondo */
+  }
+  
+  th, td {
+    border: 1px solid #4c4c4c;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+  }
+  thead {
+    background-color: #2B2B2B;
+    color: #ffffff; /* Texto blanco en la cabecera */
+  }
+
+  td{
+    width: 100px;
+    height: 50px;
+  }
+  
+  th {
+    color: #ffffff; /* Texto blanco en la cabecera */
+  }
+
