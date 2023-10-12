@@ -120,3 +120,69 @@ body{
     margin-top: 60px;
     margin-left: 150px;
 }
+
+/* Asistencia */
+
+#asistencia{
+    width: 100%;
+    color: white;
+    display: flex;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+}
+
+#asistencia-titulos{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 19px;
+}
+
+#div-asistencia{
+    justify-content: space-around;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 15px;
+}
+
+#div-asistencia .nombre-alumno{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#div-asistencia hr{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 150px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #202020; /* Cambio de color de fondo */
+  }
+  
+  th, td {
+    border: 1px solid #2B2B2B;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  thead {
+    background-color: #202020;
+    color: #ffffff; /* Texto blanco en la cabecera */
+  }
+  
+  tr:nth-child(2n) {
+    background-color: #2B2B2B; /* Fondo gris oscuro en filas pares */
+    color: #ffffff; /* Texto blanco en filas pares */
+  }
+  
+  th {
+    background-color: #202020; /* Cabecera azul */
+    color: #ffffff; /* Texto blanco en la cabecera */
+  }
