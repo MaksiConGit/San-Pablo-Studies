@@ -4,6 +4,7 @@ const opciones = document.getElementsByClassName("opciones_laterales");
 
 for (let i = 0; i < opciones.length; i++) {
 
+    contenidos[6].style.display = "block"
     contenidos[i].style.display = "none";
 
     opciones[i].addEventListener("click", function () {
