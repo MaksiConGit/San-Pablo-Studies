@@ -9,78 +9,6 @@ body{
     font-size: 15px;
 }
 
-/* Estilos para el menú lateral */
-#menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 100%;
-    background-color: #202020;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: 7px;
-    /* padding-left: 7px; */
-}
-
-#menu a {
-    text-decoration: none;
-    color: #fff;
-}
-
-#menu img{
-    width: 22px; /* Establece el ancho deseado para el ícono */
-    height: 22px; /* Establece la altura deseada para el ícono */
-    margin-right: 10px; /* Agrega un espacio a la derecha del ícono */
-}
-
-#opciones1{
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-}
-
-#opciones2{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 13px;
-}
-
-#opciones1 div {
-    background:
-      linear-gradient(#000 0 0) 
-      left /var(--d, 0%) 100% no-repeat;
-    transition: 0.2s;
-    display: flex;
-    align-items: center;
-    height: 40px;
-    padding-left: 7px;
-  }
-#opciones1 div:hover {
-    --d: 100%;
-    color: #fff;
-    cursor: pointer;
-  }
-
-#opciones2 div{
-    background:
-      linear-gradient(#000 0 0) 
-      left /var(--d, 0%) 100% no-repeat;
-    transition: 0.2s;
-    display: flex;
-    align-items: center;
-    height: 40px;
-    padding-left: 7px;
-}
-
-#opciones2 div:hover {
-    --d: 100%;
-    color: #fff;
-    cursor: pointer;
-  }
-
 /* Estilos para la barra superior */
 #barraSup{
     background-color: #202020;
@@ -116,7 +44,7 @@ body{
 
 /* Contenido */
 #contenido{
-    display: flex;
+    /* display: flex; */
     margin-top: 60px;
-    margin-left: 150px;
+    color: #fff;
 }
