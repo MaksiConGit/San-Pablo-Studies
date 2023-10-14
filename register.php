@@ -11,8 +11,8 @@
         <header>
             <div id="barraSup">
                 <img src="img/san-pablo-studies.png" alt="San Pablo Studies" id="imgSPS">
-                <span>Usuario</span>
-                <img src="img/foto-de-perfil.jpg" alt="Foto de perfil" id="imgPerfil">
+                <span>Invitado</span>
+                <img src="img/not-foto-de-perfil.jpg" alt="Foto de perfil" id="imgPerfil">
                 <div id="ciruja"></div>
             </div>
         </header>
