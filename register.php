@@ -55,7 +55,7 @@
                             $contra=trim($_POST['contra']);
 
                             $agregar="INSERT INTO cuentas(id_alumno, nombre_usuario, telefono, dni, contra) VALUES ('$alumno', '$usuario', '$telefono', '$dni', '$contra')";
-                            $res=mysqli_quer($yconexion, $agregar);
+                            $res = mysqli_query($conexion, $agregar);
                             echo "datos ingresados";
 
                             $conexion->close();
