@@ -18,28 +18,51 @@
         </header>
 
         <div id="contenido">
-            <div class="form-register">
-                <h4>Regístrate</h4>
-                <select class="controls" name="alumno">
+            <form action="" method="post">
+                <div class="form-register">
+                    <h4>Regístrate</h4>
+                    <select class="controls" name="alumno">
+                        <?php
+                            $conexion= new mysqli("localhost", "root", "", "san-pablo-studies");
+                            $sql = "SELECT id_alumno, nombres, apellidos FROM alumnos";
+                            $res=mysqli_query($conexion, $sql);
+                            // Generar opciones para el menú desplegable
+                            while ($fila = $res->fetch_assoc()) {
+                                echo "<option value='{$fila['id_alumno']}'>{$fila['nombres']} {$fila['apellidos']}</option>";
+                            }
+                            // Cerrar la conexión a la base de datos
+                            $conexion->close();
+                        ?> 
+                    </select>
+                    <input class="controls" type="text" name="nombre_usuario" placeholder="Nombre de usuario">
+                    <input class="controls" type="text" name="telefono" placeholder="Número de teléfono celular">
+                    <input class="controls" type="text" name="dni" placeholder="DNI">
+                    <input class="controls" type="password" name="contra" placeholder="Contraseña">
+                    <input class="controls" type="password" name="rcontra" placeholder="Repetir contraseña">
+                    <input class="botons" type="submit" name="enviar" value="Registrar">
+                    <p><a href="login.php">¿Ya tengo Cuenta?</a></p>
+
                     <?php
-                    $conexion= new mysqli("localhost", "root", "", "san-pablo-studies");
-                    $sql = "SELECT id_alumno, nombres, apellidos FROM alumnos";
-                    $res=mysqli_query($conexion, $sql);
-                    // Generar opciones para el menú desplegable
-                    while ($fila = $res->fetch_assoc()) {
-                        echo "<option value='{$fila['id_alumno']}'>{$fila['nombres']} {$fila['apellidos']}</option>";
-                    }
-                    // Cerrar la conexión a la base de datos
-                    $conexion->close();
-                    ?> 
-                </select>
-                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Número de teléfono celular">
-                <input class="controls" type="text" name="dni" id="dni" placeholder="DNI">
-                <input class="controls" type="password" name="correo" id="contraseña" placeholder="Contraseña">
-                <input class="controls" type="password" name="correo" id="rcontraseña" placeholder="Repetir contraseña">
-                <input class="botons" type="submit" value="Registrar">
-                <p><a href="#">¿Ya tengo Cuenta?</a></p>
-            </div>
+                        $conexion = new mysqli("localhost", "root", "", "san-pablo-studies");
+                        $sql = "SELECT id_alumno, nombre_usuario, telefono, dni, contra FROM cuentas";
+                        $res=mysqli_query($conexion, $sql);
+
+                        if(isset($_POST['enviar'])){
+                            $alumno=trim($_POST['alumno']);
+                            $usuario=trim($_POST['nombre_usuario']);
+                            $telefono=trim($_POST['telefono']);
+                            $dni=trim($_POST['dni']);
+                            $contra=trim($_POST['contra']);
+
+                            $agregar="INSERT INTO cuentas(id_alumno, nombre_usuario, telefono, dni, contra) VALUES ('$alumno', '$usuario', '$telefono', '$dni', '$contra')";
+                            $res=mysqli_quer($yconexion, $agregar);
+                            echo "datos ingresados";
+
+                            $conexion->close();
+                        }  
+                    ?>
+                </div>
+            </form>
         </div>
 
         <script src="js/main.js"></script>
