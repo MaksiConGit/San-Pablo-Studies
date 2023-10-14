@@ -62,7 +62,7 @@ html, body {
 
 .form-register {
     width: 400px;
-    background: #24303c;
+    background: #202020;
     padding: 30px;
     margin: auto;
     border-radius: 4px;
@@ -80,11 +80,11 @@ html, body {
 /* Estilos para los elementos del formulario (input, botones, etc.) */
 .controls {
     width: 100%;
-    background: #24303c;
+    background: #2B2B2B;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
-    border: 1px solid #1f53c5;
+    border: 1px solid #202;
     font-family: 'calibri';
     font-size: 18px;
     color: white;
@@ -116,4 +116,8 @@ html, body {
     color: white;
     margin: 16px 0;
     font-size: 16px;
+  }
+
+  .form-register .botons:hover{
+    cursor: pointer;
   }
