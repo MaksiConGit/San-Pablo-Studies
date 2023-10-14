@@ -22,6 +22,7 @@
                 <div class="form-register">
                     <h4>Regístrate</h4>
                     <select class="controls" name="alumno">
+                        
                         <?php
                             $conexion= new mysqli("localhost", "root", "", "san-pablo-studies");
                             $sql = "SELECT id_alumno, nombres, apellidos FROM alumnos";
@@ -54,11 +55,21 @@
                             $dni=trim($_POST['dni']);
                             $contra=trim($_POST['contra']);
 
-                            $agregar="INSERT INTO cuentas(id_alumno, nombre_usuario, telefono, dni, contra) VALUES ('$alumno', '$usuario', '$telefono', '$dni', '$contra')";
-                            $res = mysqli_query($conexion, $agregar);
-                            echo "datos ingresados";
+                            if (!empty($alumno) && !empty($usuario) && !empty($telefono) && !empty($dni) && !empty($contra)) {
+                                $agregar="INSERT INTO cuentas(id_alumno, nombre_usuario, telefono, dni, contra) VALUES ('$alumno', '$usuario', '$telefono', '$dni', '$contra')";
+                                $res = mysqli_query($conexion, $agregar);
+                                echo "datos ingresados";
+                                $conexion->close();  
 
-                            $conexion->close();
+                                if ($res) {
+                                    // Operación exitosa
+                                    header("Location: login.php");
+                                    exit(); // Asegura que el script se detiene aquí
+                                } else {
+                                    // Error en la operación
+                                    echo "Hubo un error al procesar el registro.";
+                                }
+                            }
                         }  
                     ?>
                 </div>
