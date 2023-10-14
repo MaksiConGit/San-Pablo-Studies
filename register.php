@@ -70,7 +70,7 @@
         
                                         if ($res) {
                                             // Operación exitosa
-                                            // header("Location: login.php");
+                                            header("Location: login.php");
                                             exit(); // Asegura que el script se detiene aquí
                                         } else {
                                             // Error en la operación
