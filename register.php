@@ -54,21 +54,39 @@
                             $telefono=trim($_POST['telefono']);
                             $dni=trim($_POST['dni']);
                             $contra=trim($_POST['contra']);
+                            $rcontra=trim($_POST['rcontra']);
 
-                            if (!empty($alumno) && !empty($usuario) && !empty($telefono) && !empty($dni) && !empty($contra)) {
-                                $agregar="INSERT INTO cuentas(id_alumno, nombre_usuario, telefono, dni, contra) VALUES ('$alumno', '$usuario', '$telefono', '$dni', '$contra')";
-                                $res = mysqli_query($conexion, $agregar);
-                                echo "datos ingresados";
-                                $conexion->close();  
+                            if (!empty($alumno) && !empty($usuario) && !empty($telefono) && !empty($dni) && !empty($contra) && !empty($rcontra)) {
 
-                                if ($res) {
-                                    // Operación exitosa
-                                    header("Location: login.php");
-                                    exit(); // Asegura que el script se detiene aquí
-                                } else {
-                                    // Error en la operación
-                                    echo "Hubo un error al procesar el registro.";
+                                $sql_verificar = "SELECT id_alumno FROM cuentas WHERE id_alumno = '$alumno'";
+                                $resultado_verificar = mysqli_query($conexion, $sql_verificar);
+
+                                if (mysqli_num_rows($resultado_verificar) == 0) {
+                                    if ($contra == $rcontra){
+                                        $agregar="INSERT INTO cuentas(id_alumno, nombre_usuario, telefono, dni, contra) VALUES ('$alumno', '$usuario', '$telefono', '$dni', '$contra')";
+                                        $res = mysqli_query($conexion, $agregar);
+                                        echo "Datos ingresados exitosamente";
+                                        $conexion->close();
+        
+                                        if ($res) {
+                                            // Operación exitosa
+                                            // header("Location: login.php");
+                                            exit(); // Asegura que el script se detiene aquí
+                                        } else {
+                                            // Error en la operación
+                                            echo "Hubo un error al procesar el registro.";
+                                        }
+                                    }
+                                    else{
+                                        echo "Las contraseñas no coinciden";
+                                    }
                                 }
+                                else{
+                                    echo "Este alumno ya tiene una cuenta creada";
+                                }
+                            }
+                            else{
+                                echo "Hay campos sin rellenar";
                             }
                         }  
                     ?>
