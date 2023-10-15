@@ -195,37 +195,30 @@ body{
 }
 
 #div-calendario{
-    background-color: red;
     display: flex;
     justify-content: space-around;
-    /* align-items: center; */
     margin-top: 40px;
 }
 
 table {
-    margin-right: 30px;
     border-collapse: collapse;
-    /* width: 100%; */
-    background-color: #202020; /* Cambio de color de fondo */
+    width: 100%;
+    margin-right: 40px;
   }
   
-  th, td {
+  td, th {
     border: 1px solid #4c4c4c;
     padding: 8px;
     text-align: center;
     font-size: 18px;
-  }
-  thead {
-    background-color: #2B2B2B;
-    color: #ffffff; /* Texto blanco en la cabecera */
-  }
-
-  td{
-    width: 140px;
-    height: 90px;
+    width: 14.2857%; /* Asegura que haya un 100% en total (7 columnas) */
   }
   
-  th {
-    color: #ffffff; /* Texto blanco en la cabecera */
+  thead {
+    background-color: #2B2B2B;
+    color: #ffffff;
   }
 
+  th{
+    background-color: #202020;
+  }
