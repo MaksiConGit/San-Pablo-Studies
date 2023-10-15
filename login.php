@@ -58,7 +58,8 @@
                                     // Comparar la contraseña ingresada con la contraseña de la base de datos
                                     if ($contra == $contrasena_bd){
                                         // Las contraseñas coinciden, el usuario puede iniciar sesión
-                                        echo "Contraseña correcta.";
+                                        session_start();
+                                        $_SESSION['usuario'] = $alumno; // Guarda información del usuario en la sesión
                                         header("Location: index.html");
                                         exit();
                                     }
