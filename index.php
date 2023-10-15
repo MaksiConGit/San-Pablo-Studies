@@ -74,8 +74,20 @@
         <div id="barraSup">
 
             <img src="img/san-pablo-studies.png" alt="San Pablo Studies" id="imgSPS">
-            <span>Usuario</span>
-            <img src="img/foto-de-perfil.jpg" alt="Foto de perfil" id="imgPerfil">
+
+
+            <?php
+                session_start(); // Asegúrate de iniciar la sesión
+                if (isset($_SESSION['usuario'])) {
+                    echo '<span>' . $_SESSION['usuario'] . '</span>';
+                    echo '<img src="img/foto-de-perfil.jpg" alt="Foto de perfil" id="imgPerfil">';
+                }
+                else{
+                    echo '<span>Invitado</span>';
+                    echo '<img src="img/not-foto-de-perfil.jpg" alt="Foto de perfil" id="imgPerfil">';
+                }
+            ?>
+
             <div id="ciruja"></div>
 
         </div>

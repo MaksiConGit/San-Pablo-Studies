@@ -58,10 +58,26 @@
                                     // Comparar la contraseña ingresada con la contraseña de la base de datos
                                     if ($contra == $contrasena_bd){
                                         // Las contraseñas coinciden, el usuario puede iniciar sesión
+
                                         session_start();
-                                        $_SESSION['usuario'] = $alumno; // Guarda información del usuario en la sesión
-                                        header("Location: index.html");
-                                        exit();
+
+                                        if (!empty($contra)){
+                                            $conexion= new mysqli("localhost", "root", "", "san-pablo-studies");
+            
+                                            $encontrar_nombre = "SELECT nombre_usuario FROM cuentas WHERE id_alumno = '$alumno'";
+                
+                                            $nombre_encontrado = mysqli_query($conexion, $encontrar_nombre);
+                
+                                            if (mysqli_num_rows($nombre_encontrado) == 1) {
+
+                                                $fila_nombre = mysqli_fetch_assoc($nombre_encontrado);
+                                                $nombre_usuario = $fila_nombre['nombre_usuario'];
+
+                                                $_SESSION['usuario'] = $nombre_usuario; // Guarda información del usuario en la sesión
+                                                header("Location: index.php");
+                                                exit();
+                                            }
+                                        }
                                     }
                                     else {
                                         // Las contraseñas no coinciden, mostrar un mensaje de error
