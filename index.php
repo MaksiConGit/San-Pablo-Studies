@@ -97,14 +97,14 @@
 
                         <?php
                             $conexion= new mysqli("localhost", "root", "", "san-pablo-studies");
-                            $sql = "SELECT nombre_pdf FROM biblioteca WHERE ID_materia = 3";
+                            $sql = "SELECT nombre_pdf, ruta_materia FROM biblioteca WHERE ID_materia = 3";
                             $res=mysqli_query($conexion, $sql);
 
                             // Generar opciones para el menú desplegable
                             while ($fila = $res->fetch_assoc()) {
                                 // echo "<option value='{$fila['id_alumno']}'>{$fila['nombres']} {$fila['apellidos']}</option>";
 
-                                echo "<div class='archivo'>
+                                echo "<div class='archivo' data-nombre-archivo='" . $fila['nombre_pdf'] . "' data-ruta-archivo='" . $fila['ruta_materia'] . "'>
                                         <div class='rect-img'>
                                             <div class='div-rectangulo'><img src='img/pdf.png' alt=''></div>
                                         </div>
