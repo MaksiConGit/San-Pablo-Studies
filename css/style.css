@@ -161,7 +161,11 @@ body{
 
 #pdfs-biblioteca .div-materia{
     display: flex;
-    justify-content: space-around;
+}
+
+.div-materia{
+    overflow-x: scroll;
+    margin-bottom: 45px;
 }
 
 .div-materia div img{
@@ -172,7 +176,8 @@ body{
 #pdfs-biblioteca .div-materia .archivo{
     justify-content: center;
     align-items: center; 
-    margin-bottom: 45px;
+    margin-bottom: 15px;
+    margin-right: 100px;
 }
 
 #pdfs-biblioteca .div-materia .archivo:hover{
