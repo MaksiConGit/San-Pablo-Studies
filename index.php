@@ -1,3 +1,9 @@
+<?php
+
+    session_start(); // Asegúrate de iniciar la sesión
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -77,7 +83,6 @@
 
 
             <?php
-                session_start(); // Asegúrate de iniciar la sesión
                 if (isset($_SESSION['usuario'])) {
                     echo '<span>' . $_SESSION['usuario'] . '</span>';
                     echo '<img src="img/foto-de-perfil.jpg" alt="Foto de perfil" id="imgPerfil">';
