@@ -111,54 +111,99 @@
 
                 <div id="div-asistencia">
 
-                    <span class="nombre-alumno">Maximiliano, Alcaraz</span><hr>
+                    <?php
 
-                    <table>
-                        <thead>
-                          <tr>
-                            <th>Materia</th>
-                            <th>Porcentaje de Asistencia</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Prácticas Profesionalizantes I</td>
-                            <td>100%</td>
-                          </tr>
-                          <tr>
-                            <td>Inglés Técnico</td>
-                            <td>100%</td>
-                          </tr>
-                          <tr>
-                            <td>Gestión de Software</td>
-                            <td>100%</td>
-                          </tr>
-                          <tr>
-                            <td>Desarrollo de Sistemas</td>
-                            <td>100%</td>
-                          </tr>
-                          <tr>
-                            <td>Estretégias de Negocios</td>
-                            <td>100%</td>
-                          </tr>
-                          <tr>
-                            <td>Estadística I</td>
-                            <td>100%</td>
-                          </tr>
-                          <tr>
-                            <td>UDI II</td>
-                            <td>100%</td>
-                          </tr>
-                          <tr>
-                            <td>Innovación y Desarrollo Emprendedor</td>
-                            <td>100%</td>
-                          </tr>
-                          <tr>
-                            <td>Problemas Socio-Contemporáneos</td>
-                            <td>100%</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                        if (isset($_SESSION['usuario'])) {
+
+                            // Obtener id_usuario del usuario en sesión
+                            $alumno = $_SESSION['usuario'];
+                            $conexion= new mysqli("localhost", "root", "", "san-pablo-studies");
+                            $sql = "SELECT id_alumno FROM cuentas WHERE nombre_usuario = '$alumno'";
+                            $res=mysqli_query($conexion, $sql);
+
+                            $fila_id_alumno = mysqli_fetch_assoc($res);
+                            $id_alumno_bd = $fila_id_alumno['id_alumno'];
+
+                            // Obtener nombres y apellidos del usuario en sesión
+                            $sql = "SELECT nombres, apellidos FROM alumnos WHERE id_alumno = '$id_alumno_bd'";
+                            $res=mysqli_query($conexion, $sql);
+
+                            $fila_nom_apel = mysqli_fetch_assoc($res);
+                            $nombres = $fila_nom_apel['nombres'];
+                            $apellidos = $fila_nom_apel['apellidos'];
+
+                            echo "<span class='nombre-alumno'>{$nombres}, {$apellidos}</span><hr>";
+
+                            // Obtener porcentajes de asistencias del usuario en sesión
+                            $sql = "SELECT * FROM asistencia WHERE id_alumno = '$id_alumno_bd'";
+                            $res=mysqli_query($conexion, $sql);
+
+                            $fila_asisten = mysqli_fetch_assoc($res);
+
+                            $prac_profes =  $fila_asisten['pract_profes'];
+                            $ingles =  $fila_asisten['ingles_tecnico'];
+                            $gestion_soft =  $fila_asisten['gestion_de_software'];
+                            $des_de_sist =  $fila_asisten['des_de_sist'];
+                            $estrat_de_nego =  $fila_asisten['estrat_de_nego'];
+                            $estadis =  $fila_asisten['estadistica'];
+                            $udi =  $fila_asisten['udi'];
+                            $innova =  $fila_asisten['innovacion'];
+                            $problem_socio =  $fila_asisten['problem_socio_cont'];
+                            $asist_total =  $fila_asisten['asist_total'];
+
+                            echo " <table>
+                            <thead>
+                              <tr>
+                                <th>Materia</th>
+                                <th>Porcentaje de Asistencia</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Prácticas Profesionalizantes I</td>
+                                <td>{$prac_profes}%</td>
+                              </tr>
+                              <tr>
+                                <td>Inglés Técnico</td>
+                                <td>{$ingles}%</td>
+                              </tr>
+                              <tr>
+                                <td>Gestión de Software</td>
+                                <td>{$gestion_soft}%</td>
+                              </tr>
+                              <tr>
+                                <td>Desarrollo de Sistemas</td>
+                                <td>{$des_de_sist}%</td>
+                              </tr>
+                              <tr>
+                                <td>Estretégias de Negocios</td>
+                                <td>{$estrat_de_nego}%</td>
+                              </tr>
+                              <tr>
+                                <td>Estadística I</td>
+                                <td>{$estadis}%</td>
+                              </tr>
+                              <tr>
+                                <td>UDI II</td>
+                                <td>{$udi}%</td>
+                              </tr>
+                              <tr>
+                                <td>Innovación y Desarrollo Emprendedor</td>
+                                <td>{$innova}%</td>
+                              </tr>
+                              <tr>
+                                <td>Problemas Socio-Contemporáneos</td>
+                                <td>{$problem_socio}%</td>
+                              </tr>
+                              <tr>
+                              <td>Asistencia Total</td>
+                              <td>{$asist_total}%</td>
+                            </tr>
+                            </tbody>
+                          </table>";
+                        }
+
+                    ?>
 
                 </div>
 
