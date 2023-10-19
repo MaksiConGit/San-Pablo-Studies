@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>San Pablo Studies</title>
         <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         
@@ -167,7 +167,7 @@
 
         </div>
 
-        <script src="js/main.js"></script>
+        <script src="main.js"></script>
     </body>
 
 </html>
