@@ -100,8 +100,95 @@
         <div id="contenido">
 
             <div id="calendario" class="contenido_mostrado"><h2>Calendario</h2></div>
-            <div id="horarios" class="contenido_mostrado"><h2>Horarios</h2></div>
-            <div id="biblioteca" class="contenido_mostrado"><h2>Biblioteca</h2></div>
+            <div id="horarios" class="contenido_mostrado"><h2>Horarios</h2></div> 
+                       
+            <div id="biblioteca" class="contenido_mostrado">
+
+                <div id="biblioteca-titulos"> 
+                    <h2>Biblioteca</h2>
+                </div>
+
+                <div id="pdfs-biblioteca">
+
+                    <span class="nombre-materia">Prácticas Profezionalizantes I</span><hr>
+                    <div class="div-materia">
+
+                        <?php
+                            $conexion= new mysqli("localhost", "root", "", "san-pablo-studies");
+                            $sql = "SELECT nombre_pdf, ruta_materia FROM biblioteca WHERE ID_materia = 3";
+                            $res=mysqli_query($conexion, $sql);
+
+                            // Generar opciones para el menú desplegable
+                            while ($fila = $res->fetch_assoc()) {
+                                // echo "<option value='{$fila['id_alumno']}'>{$fila['nombres']} {$fila['apellidos']}</option>";
+
+                                echo "<div class='archivo' data-nombre-archivo='" . $fila['nombre_pdf'] . "' data-ruta-archivo='" . $fila['ruta_materia'] . "'>
+                                        <div class='rect-img'>
+                                            <div class='div-rectangulo'><img src='img/pdf.png' alt=''></div>
+                                        </div>
+                                        <div class='nombre-archivo'>" . $fila['nombre_pdf'] . "</div>
+                                        </div>";
+                                }
+                            // Cerrar la conexión a la base de datos
+                            $conexion->close();
+                        ?> 
+
+                    </div>
+
+                    <span class="nombre-materia">Estadística I</span><hr>
+                    <div class="div-materia">
+
+                        <?php
+                            $conexion= new mysqli("localhost", "root", "", "san-pablo-studies");
+                            $sql = "SELECT nombre_pdf FROM biblioteca WHERE ID_materia = 2";
+                            $res=mysqli_query($conexion, $sql);
+
+                            // Generar opciones para el menú desplegable
+                            while ($fila = $res->fetch_assoc()) {
+                                // echo "<option value='{$fila['id_alumno']}'>{$fila['nombres']} {$fila['apellidos']}</option>";
+
+                                echo "<div class='archivo'>
+                                        <div class='rect-img'>
+                                            <div class='div-rectangulo'><img src='img/pdf.png' alt=''></div>
+                                        </div>
+                                        <div class='nombre-archivo'>" . $fila['nombre_pdf'] . "</div>
+                                        </div>";
+                                }
+                            // Cerrar la conexión a la base de datos
+                            $conexion->close();
+                        ?> 
+
+                    </div>
+
+                    <span class="nombre-materia">Desarrollo de Sistemas</span><hr>
+                    <div class="div-materia">
+
+                        <?php
+                        $conexion= new mysqli("localhost", "root", "", "san-pablo-studies");
+                        $sql = "SELECT nombre_pdf FROM biblioteca WHERE ID_materia = 1";
+                        $res=mysqli_query($conexion, $sql);
+
+                        // Generar opciones para el menú desplegable
+                        while ($fila = $res->fetch_assoc()) {
+                            // echo "<option value='{$fila['id_alumno']}'>{$fila['nombres']} {$fila['apellidos']}</option>";
+
+                            echo "<div class='archivo'>
+                                    <div class='rect-img'>
+                                        <div class='div-rectangulo'><img src='img/foto.png' alt=''></div>
+                                    </div>
+                                    <div class='nombre-archivo'>" . $fila['nombre_pdf'] . "</div>
+                                    </div>";
+                            }
+                        // Cerrar la conexión a la base de datos
+                        $conexion->close();
+                        ?> 
+
+                    </div>
+
+                </div>
+
+            </div>
+
             <div id="asistencia" class="contenido_mostrado">
 
                 <div id="asistencia-titulos"> 
@@ -209,6 +296,7 @@
 
 
             </div>
+
             <div id="notas" class="contenido_mostrado"><h2>Notas</h2></div>
             <div id="carpetas" class="contenido_mostrado"><h2>Carpetas</h2></div>
             <div id="resumenes" class="contenido_mostrado"><h2>Resúmenes</h2></div>
