@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-10-2023 a las 18:53:57
+-- Tiempo de generación: 19-10-2023 a las 21:08:56
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -97,23 +97,6 @@ INSERT INTO `asistencia` (`id_asistencia`, `id_alumno`, `fecha`, `pract_profes`,
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `cuenta`
---
-
-CREATE TABLE `cuenta` (
-  `id_cuenta` int(11) NOT NULL,
-  `id_alumno` int(11) NOT NULL,
-  `nombre_usuario` tinytext NOT NULL,
-  `mail` tinytext NOT NULL,
-  `contraseña` tinytext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `cuenta`
---
-
-INSERT INTO `cuenta` (`id_cuenta`, `id_alumno`, `nombre_usuario`, `mail`, `contraseña`) VALUES
-(1, 2, 'Maxi', 'maximilianoalcaraz464@gmail.com', 'contraseña123');
 -- Estructura de tabla para la tabla `biblioteca`
 --
 
@@ -144,7 +127,20 @@ INSERT INTO `biblioteca` (`ID_pdf`, `ID_materia`, `ruta_materia`, `nombre_pdf`) 
 (13, 2, 'pdf/estadis/', 'Medidas de dispersión.pdf'),
 (14, 2, 'pdf/estadis/', 'Practica Medidas de dispersión.pdf'),
 (15, 2, 'pdf/estadis/', 'Practica para parcial.pdf'),
-(16, 2, 'pdf/estadis/', 'Practica parcial 2.pdf');
+(16, 2, 'pdf/estadis/', 'Practica parcial 2.pdf'),
+(17, 3, 'pdf/pract_profes/', 'Comencemos html - TP1.pdf'),
+(18, 3, 'pdf/pract_profes/', 'Desarrollo Web-backend fronted.pdf'),
+(19, 3, 'pdf/pract_profes/', 'Ejercitación HTML - TP4.pdf'),
+(20, 3, 'pdf/pract_profes/', 'Prac Profesionalizante - UNIDAD 1.pdf'),
+(21, 3, 'pdf/pract_profes/', 'proyecto final 2023.pdf'),
+(22, 3, 'pdf/pract_profes/', 'Tp4- resuelto.docx.pdf'),
+(23, 3, 'pdf/pract_profes/', 'trabajo cuatrimestral.pdf'),
+(24, 3, 'pdf/pract_profes/', 'Unidad II - Desarrollo Web.pdf'),
+(25, 3, 'pdf/pract_profes/', 'Unidad III - BOOTSTRAP.pdf'),
+(26, 3, 'pdf/pract_profes/', 'Unidad III - JAVASCRIPT-1.pdf'),
+(27, 3, 'pdf/pract_profes/', 'Unidad III - JAVASCRIPT-2.pdf'),
+(28, 3, 'pdf/pract_profes/', 'Unidad III- Front End.pdf'),
+(29, 3, 'pdf/pract_profes/', 'Unidad IV - Backend - APUNTE.pdf');
 
 -- --------------------------------------------------------
 
@@ -207,11 +203,6 @@ ALTER TABLE `asistencia`
   ADD KEY `id_alumno` (`id_alumno`);
 
 --
--- Indices de la tabla `cuenta`
---
-ALTER TABLE `cuenta`
-  ADD PRIMARY KEY (`id_cuenta`),
-  ADD KEY `id_alumno` (`id_alumno`);
 -- Indices de la tabla `biblioteca`
 --
 ALTER TABLE `biblioteca`
@@ -248,14 +239,10 @@ ALTER TABLE `asistencia`
   MODIFY `id_asistencia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `cuenta`
---
-ALTER TABLE `cuenta`
-  MODIFY `id_cuenta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 -- AUTO_INCREMENT de la tabla `biblioteca`
 --
 ALTER TABLE `biblioteca`
-  MODIFY `ID_pdf` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1031;
+  MODIFY `ID_pdf` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1044;
 
 --
 -- AUTO_INCREMENT de la tabla `cuentas`
@@ -280,10 +267,6 @@ ALTER TABLE `asistencia`
   ADD CONSTRAINT `asistencia_ibfk_1` FOREIGN KEY (`id_alumno`) REFERENCES `alumnos` (`id_alumno`) ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `cuenta`
---
-ALTER TABLE `cuenta`
-  ADD CONSTRAINT `cuenta_ibfk_1` FOREIGN KEY (`id_alumno`) REFERENCES `alumnos` (`id_alumno`) ON UPDATE CASCADE;
 -- Filtros para la tabla `biblioteca`
 --
 ALTER TABLE `biblioteca`
