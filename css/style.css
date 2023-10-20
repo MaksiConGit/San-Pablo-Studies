@@ -436,6 +436,7 @@ table {
 
 #div-notas .div-materia-notas .archivo .nombre-examen{
     width: 110px;
+    justify-content: center;
 }
 
 #div-notas .div-materia-notas .archivo .div-rectangulo{
