@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-10-2023 a las 21:21:48
+-- Tiempo de generación: 20-10-2023 a las 22:15:42
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -172,18 +172,23 @@ INSERT INTO `cuentas` (`id_cuenta`, `id_alumno`, `nombre_usuario`, `telefono`, `
 
 CREATE TABLE `materias` (
   `ID_materia` int(11) NOT NULL,
-  `nombre_materia` text NOT NULL,
-  `ruta` text NOT NULL
+  `nombre_materia` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `materias`
 --
 
-INSERT INTO `materias` (`ID_materia`, `nombre_materia`, `ruta`) VALUES
-(1, 'Desarrollo de Sistemas', 'pdf/desa_de_sist'),
-(2, 'Estadística', 'pdf/estadis'),
-(3, 'Prácticas Profesionalizantes', 'pdf/pract_profes');
+INSERT INTO `materias` (`ID_materia`, `nombre_materia`) VALUES
+(1, 'Desarrollo de Sistemas'),
+(2, 'Estadística I'),
+(3, 'Prácticas Profesionalizantes I'),
+(4, 'Problemas Socio Contemporáneos'),
+(5, 'UDI II'),
+(6, 'Inglés Técnico II'),
+(7, 'Innovación y Desarrollo Emprendedor'),
+(8, 'Gestión de Software II'),
+(9, 'Estratégias de Negocios');
 
 -- --------------------------------------------------------
 
@@ -288,7 +293,7 @@ ALTER TABLE `cuentas`
 -- AUTO_INCREMENT de la tabla `materias`
 --
 ALTER TABLE `materias`
-  MODIFY `ID_materia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID_materia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `notas`

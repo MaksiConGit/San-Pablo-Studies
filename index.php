@@ -305,353 +305,83 @@
 
                 <div id="div-notas">
 
-                    <span class="nombre-materia">Prácticas Profesionalizantes</span><hr>
-                    <div class="div-materia-notas">
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p>10</p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 1</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p>9 >:(</p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 2</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p>10 B)</p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 3</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p>10</p></div>
-                            </div>
-                            <div class="nombre-examen">Promedio</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p>10</p></div>
-                            </div>
-                            <div class="nombre-examen">Nota Final</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div id="div-notas">
-
-                    <span class="nombre-materia">Inglés Técnico</span><hr>
-                    <div class="div-materia-notas">
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p>9.60</p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 1</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 2</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 3</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Promedio</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Nota Final</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div id="div-notas">
-
-                    <span class="nombre-materia">Gestión de Software</span><hr>
-                    <div class="div-materia-notas">
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p>8</p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 1</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p>10</p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 2</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 3</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Promedio</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Nota Final</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div id="div-notas">
-
-                    <span class="nombre-materia">Desarrollo de Sistemas</span><hr>
-                    <div class="div-materia-notas">
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p>8</p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 1</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p>8</p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 2</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 3</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Promedio</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Nota Final</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div id="div-notas">
-
-                    <span class="nombre-materia">Estratégias de Negocios</span><hr>
-                    <div class="div-materia-notas">
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 1</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 2</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 3</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Promedio</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Nota Final</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div id="div-notas">
-
-                    <span class="nombre-materia">Estadística I</span><hr>
-                    <div class="div-materia-notas">
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p>10</p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 1</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 2</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 3</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Promedio</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Nota Final</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div id="div-notas">
-
-                    <span class="nombre-materia">UDI II</span><hr>
-                    <div class="div-materia-notas">
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 1</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 2</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 3</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Promedio</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Nota Final</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div id="div-notas">
-
-                    <span class="nombre-materia">Innovación y Desarrollo Emprendedor</span><hr>
-                    <div class="div-materia-notas">
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 1</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 2</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Parcial 3</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Promedio</div>
-                        </div>
-
-                        <div class="archivo">
-                            <div class="rect-span">
-                                <div class="div-rectangulo"><p></p></div>
-                            </div>
-                            <div class="nombre-examen">Nota Final</div>
-                        </div>
-
-                    </div>
+                    <?php
+
+                       if(isset($_SESSION['usuario'])){
+
+                            // Obtener id_usuario del usuario en sesión
+                            $alumno = $_SESSION['usuario'];
+
+                            $conexion= new mysqli("localhost", "root", "", "san-pablo-studies");
+
+                            $sql = "SELECT id_alumno FROM cuentas WHERE nombre_usuario = '$alumno'";
+                            $res=mysqli_query($conexion, $sql);
+
+                            $fila_id_alumno = mysqli_fetch_assoc($res);
+                            $id_alumno_bd = $fila_id_alumno['id_alumno'];
+
+                            // Obtener nombres de todas las materias
+                            $sql = "SELECT nombre_materia FROM materias";
+                            $res=mysqli_query($conexion, $sql);
+
+                            while($fila_info_materia = $res->fetch_assoc()){
+                                $nombre_materia = $fila_info_materia['nombre_materia'];
+                                $nombres_materias[] = $nombre_materia; 
+                            }
+
+                            $numero_iteracion = 0;
+
+                            // Iterar todas las materias y mostrarlas junto con sus notas
+                            foreach($nombres_materias as $materia){
+                                $numero_iteracion++;
+                                // Obtener nombres y apellidos del usuario en sesión
+                                $sql = "SELECT id_materia, num_parcial, nota FROM notas WHERE id_alumno = '$id_alumno_bd' AND id_materia = $numero_iteracion";
+                                $res=mysqli_query($conexion, $sql);
+
+                                $cont_parciales = 1;
+
+                                echo "<span class='nombre-materia'>$materia</span><hr>
+                                <div class='div-materia-notas'>";
+
+                                while ($fila_info_notas = $res->fetch_assoc()) {
+
+                                    $cont_parciales += 1;
+
+                                    echo "<div class='archivo'>
+                                        <div class='rect-span'>
+                                            <div class='div-rectangulo'><p>" . $fila_info_notas['nota'] . "</p></div>
+                                        </div>
+                                        <div class='nombre-examen'>Parcial " . $fila_info_notas['num_parcial'] . "</div>
+                                    </div>";
+                                }
+
+                                // Mostrar el resto de parciales sin nota
+                                for ($cont_parciales; $cont_parciales < 4; $cont_parciales++){
+                                    
+                                    echo "<div class='archivo'>
+                                        <div class='rect-span'>
+                                            <div class='div-rectangulo'><p></p></div>
+                                        </div>
+                                        <div class='nombre-examen'>Parcial $cont_parciales</div>
+                                    </div>";
+
+                                    if ($cont_parciales > 2){
+                                        echo "<div class='archivo'>
+                                            <div class='rect-span'>
+                                                <div class='div-rectangulo'><p></p></div>
+                                            </div>
+                                            <div class='nombre-examen'>Nota Final</div>
+                                        </div>";
+                                    }
+                                }
+
+                                echo "</div>";
+                            }
+
+                            $conexion->close();
+                        } 
+
+                    ?>
 
                 </div>
 
