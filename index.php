@@ -10,8 +10,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>San Pablo Studies</title>
-        <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.cdnfonts.com/css/roboto" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
         
@@ -305,7 +305,7 @@
 
         </div>
 
-        <script src="main.js"></script>
+        <script src="js/main.js"></script>
     </body>
 
 </html>

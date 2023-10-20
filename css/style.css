@@ -131,6 +131,13 @@ html, body {
     margin-left: 150px;
 }
 
+#contenido-logreg{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: calc(100% - 60px); /* Resta la altura de la barra superior */
+}
+
 .contenido_mostrado{
   width: 100%;
   color: white;

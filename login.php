@@ -17,7 +17,7 @@
             </div>
         </header>
 
-        <div id="contenido">
+        <div id="contenido-logreg">
             <form action="" method="post">
                 <div class="form-register">
                     <h4>Inicia Sesión</h4>
