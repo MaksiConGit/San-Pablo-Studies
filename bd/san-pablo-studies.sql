@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-10-2023 a las 21:08:56
+-- Tiempo de generación: 19-10-2023 a las 21:21:48
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -185,6 +185,32 @@ INSERT INTO `materias` (`ID_materia`, `nombre_materia`, `ruta`) VALUES
 (2, 'Estadística', 'pdf/estadis'),
 (3, 'Prácticas Profesionalizantes', 'pdf/pract_profes');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `notas`
+--
+
+CREATE TABLE `notas` (
+  `id_nota` int(11) NOT NULL,
+  `id_alumno` int(11) NOT NULL,
+  `id_materia` int(11) NOT NULL,
+  `fecha` date NOT NULL,
+  `num_parcial` tinyint(1) NOT NULL,
+  `nota` tinyint(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `notas`
+--
+
+INSERT INTO `notas` (`id_nota`, `id_alumno`, `id_materia`, `fecha`, `num_parcial`, `nota`) VALUES
+(1, 2, 3, '2023-10-19', 1, 10),
+(2, 2, 3, '2023-10-19', 2, 9),
+(3, 2, 2, '2023-10-19', 1, 10),
+(4, 2, 1, '2023-10-19', 1, 8),
+(5, 2, 1, '2023-10-19', 2, 8);
+
 --
 -- Índices para tablas volcadas
 --
@@ -223,6 +249,14 @@ ALTER TABLE `materias`
   ADD PRIMARY KEY (`ID_materia`);
 
 --
+-- Indices de la tabla `notas`
+--
+ALTER TABLE `notas`
+  ADD PRIMARY KEY (`id_nota`),
+  ADD KEY `id_alumno` (`id_alumno`,`id_materia`),
+  ADD KEY `id_materia` (`id_materia`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -257,6 +291,12 @@ ALTER TABLE `materias`
   MODIFY `ID_materia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT de la tabla `notas`
+--
+ALTER TABLE `notas`
+  MODIFY `id_nota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- Restricciones para tablas volcadas
 --
 
@@ -277,6 +317,13 @@ ALTER TABLE `biblioteca`
 --
 ALTER TABLE `cuentas`
   ADD CONSTRAINT `cuentas_ibfk_1` FOREIGN KEY (`id_alumno`) REFERENCES `alumnos` (`id_alumno`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `notas`
+--
+ALTER TABLE `notas`
+  ADD CONSTRAINT `notas_ibfk_1` FOREIGN KEY (`id_alumno`) REFERENCES `alumnos` (`id_alumno`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `notas_ibfk_2` FOREIGN KEY (`id_materia`) REFERENCES `materias` (`ID_materia`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
