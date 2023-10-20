@@ -9,7 +9,14 @@ body{
     font-size: 15px;
 }
 
-/* Estilos para el menú lateral */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Menú lateral */
 #menu {
     position: fixed;
     top: 0;
@@ -22,7 +29,6 @@ body{
     flex-direction: column;
     justify-content: space-between;
     padding-top: 7px;
-    /* padding-left: 7px; */
 }
 
 #menu a {
@@ -31,9 +37,9 @@ body{
 }
 
 #menu img{
-    width: 22px; /* Establece el ancho deseado para el ícono */
-    height: 22px; /* Establece la altura deseada para el ícono */
-    margin-right: 10px; /* Agrega un espacio a la derecha del ícono */
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
 }
 
 #opciones1{
@@ -85,7 +91,8 @@ header {
     height: 60px;
 }
 
-/* Estilos para la barra superior */
+
+/* Barra superior */
 #barraSup{
     background-color: #202020;
     color: #fff;
@@ -94,9 +101,9 @@ header {
     position: fixed;
     width: 100%;
     height: 60px;
-    display: flex; /* Utilizamos flexbox para controlar la disposición */
-    justify-content: flex-start; /* Alinea los elementos al principio del div */
-    align-items: center; /* Alinea verticalmente los elementos al centro (opcional) */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #barraSup span{
@@ -118,24 +125,12 @@ header {
     width: 15px;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
 
 /* Contenido */
 #contenido{
     display: flex;
     margin-top: 60px;
     margin-left: 150px;
-}
-
-#contenido-logreg{
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  height: calc(100% - 60px); /* Resta la altura de la barra superior */
 }
 
 .contenido_mostrado{
@@ -148,7 +143,78 @@ html, body {
   padding-right: 30px;
 }
 
-#asistencia-titulos{
+
+/* Login / Register */
+#contenido-logreg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 60px);
+}
+
+.form-register {
+  width: 400px;
+  background: #202020;
+  padding: 30px;
+  margin: auto;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+  box-sizing: border-box;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  background: #2B2B2B;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #202;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-register a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-register .botons {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.form-register .botons:hover{
+  cursor: pointer;
+}
+
+/* Biblioteca */
+#biblioteca-titulos{
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
@@ -156,12 +222,116 @@ html, body {
   font-size: 19px;
 }
 
-#biblioteca-titulos{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    font-size: 19px;
+#pdfs-biblioteca{
+  justify-content: space-around;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-bottom: 15px;
+}
+
+#pdfs-biblioteca .nombre-materia{
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#pdfs-biblioteca hr{
+  margin-top: 10px;
+  margin-bottom: 25px;
+  width: 150px;
+}
+
+#pdfs-biblioteca .div-materia{
+  display: flex;
+}
+
+.div-materia{
+  overflow-x: scroll;
+  margin-bottom: 45px;
+}
+
+.div-materia div img{
+  width: 50px;
+  height: 50px;
+}
+
+#pdfs-biblioteca .div-materia .archivo{
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 15px;
+  margin-right: 100px;
+}
+
+#pdfs-biblioteca .div-materia .archivo:hover{
+  cursor: pointer;
+}
+
+#pdfs-biblioteca .div-materia .archivo .rect-img{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+#pdfs-biblioteca .div-materia .archivo .nombre-archivo{
+  width: 110px;
+}
+
+#pdfs-biblioteca .div-materia .archivo .div-rectangulo{
+  background-color: #202020;
+  padding: 5px;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pdfs-biblioteca .div-materia .flecha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  width: 100px;
+  height: 60px;
+  margin-top: 25px;
+  padding: 5px;
+}
+
+#pdfs-biblioteca .nombre-archivo{
+  display: flex;
+}
+
+#pdfs-biblioteca .nombre-archivo div{
+  display: flex;
+  justify-content: center;
+  margin-right: 50px;
+  width: 100px;
+  height: 60px;
+  margin-top: 3px;
+  margin-bottom: 35px;
+  padding: 5px;
+}
+
+#pdfs-biblioteca span{
+  font-size: 18px;
+}
+
+#pdfs-biblioteca div span{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+/* Asistencia */
+#asistencia-titulos{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-size: 19px;
 }
 
 #div-asistencia{
@@ -171,21 +341,9 @@ html, body {
   margin-bottom: 15px;
 }
 
-#pdfs-biblioteca{
-    justify-content: space-around;
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-bottom: 15px;
-}
-
 #div-asistencia .nombre-alumno{
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
-}
-
-#pdfs-biblioteca .nombre-materia{
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
 }
 
 #div-asistencia hr{
@@ -194,16 +352,10 @@ html, body {
   width: 150px;
 }
 
-#pdfs-biblioteca hr{
-    margin-top: 10px;
-    margin-bottom: 25px;
-    width: 150px;
-}
-
 table {
     border-collapse: collapse;
     width: 100%;
-    background-color: #202020; /* Cambio de color de fondo */
+    background-color: #202020;
   }
   
   th, td {
@@ -214,163 +366,15 @@ table {
   }
   thead {
     background-color: #202020;
-    color: #ffffff; /* Texto blanco en la cabecera */
+    color: #ffffff;
   }
   
   tr:nth-child(2n) {
-    background-color: #2B2B2B; /* Fondo gris oscuro en filas pares */
-    color: #ffffff; /* Texto blanco en filas pares */
+    background-color: #2B2B2B;
+    color: #ffffff;
   }
   
   th {
-    background-color: #202020; /* Cabecera azul */
-    color: #ffffff; /* Texto blanco en la cabecera */
-  }
-
-.form-register {
-    width: 400px;
-    background: #202020;
-    padding: 30px;
-    margin: auto;
-    border-radius: 4px;
-    font-family: 'calibri';
-    color: white;
-    box-shadow: 7px 13px 37px #000;
-    box-sizing: border-box;
-  }
-
-  .form-register h4 {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-
-/* Estilos para los elementos del formulario (input, botones, etc.) */
-.controls {
-    width: 100%;
-    background: #2B2B2B;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #202;
-    font-family: 'calibri';
-    font-size: 18px;
-    color: white;
-    box-sizing: border-box;
-  }
-
-  .form-register p {
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 40px;
-  }
-  
-  .form-register a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .form-register a:hover {
-    color: white;
-    text-decoration: underline;
-  }
-  
-  .form-register .botons {
-    width: 100%;
-    background: #1f53c5;
-    border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
-  }
-
-  .form-register .botons:hover{
-    cursor: pointer;
-  }
-#pdfs-biblioteca .div-materia{
-    display: flex;
-}
-
-.div-materia{
-    overflow-x: scroll;
-    margin-bottom: 45px;
-}
-
-.div-materia div img{
-    width: 50px;
-    height: 50px;
-}
-
-#pdfs-biblioteca .div-materia .archivo{
-    justify-content: center;
-    align-items: center; 
-    margin-bottom: 15px;
-    margin-right: 100px;
-}
-
-#pdfs-biblioteca .div-materia .archivo:hover{
-    cursor: pointer;
-}
-
-
-#pdfs-biblioteca .div-materia .archivo .rect-img{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-bottom: 5px;
-}
-
-#pdfs-biblioteca .div-materia .archivo .nombre-archivo{
-    width: 110px;
-}
-
-#pdfs-biblioteca .div-materia .archivo .div-rectangulo{
     background-color: #202020;
-    /* margin-right: 50px; */
-    /* margin-top: 25px; */
-    padding: 5px;
-    width: 100px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#pdfs-biblioteca .div-materia .flecha{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 50px;
-    width: 100px;
-    height: 60px;
-    margin-top: 25px;
-    padding: 5px;
-}
-
-#pdfs-biblioteca .nombre-archivo{
-    display: flex;
-}
-
-#pdfs-biblioteca .nombre-archivo div{
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    margin-right: 50px;
-    width: 100px;
-    height: 60px;
-    margin-top: 3px;
-    margin-bottom: 35px;
-    padding: 5px;
-}
-
-#pdfs-biblioteca span{
-    font-size: 18px;
-}
-
-#pdfs-biblioteca div span{
-    display: flex;
-    flex-direction: column; /* Coloca los elementos en columnas */
-    align-items: center; /* Centra horizontalmente los elementos */
-    text-align: center; /* Centra horizontalmente el texto dentro de los rectángulos */
-    margin-bottom: 10px;
-}
+    color: #ffffff;
+  }
