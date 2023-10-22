@@ -23,6 +23,7 @@ body{
     justify-content: space-between;
     padding-top: 7px;
     /* padding-left: 7px; */
+    z-index: 1;
 }
 
 #menu a {
@@ -93,6 +94,7 @@ body{
     display: flex; /* Utilizamos flexbox para controlar la disposición */
     justify-content: flex-start; /* Alinea los elementos al principio del div */
     align-items: center; /* Alinea verticalmente los elementos al centro (opcional) */
+    z-index: 1;
 }
 
 #barraSup span{
@@ -148,12 +150,12 @@ body{
     margin-bottom: 15px;
 }
 
-#div-carpetas .nombre-alumno{
+.nombre-alumno{
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
 }
 
-#div-carpetas hr{
+hr{
     margin-top: 10px;
     margin-bottom: 25px;
     width: 150px;
@@ -169,29 +171,29 @@ body{
     height: 50px;
 }
 
-#div-carpetas .div-alumno .archivo{
+#div-carpetas .div-alumno .archivo-materia{
     justify-content: center;
     align-items: center; 
     margin-bottom: 45px;
 }
 
-#div-carpetas .div-alumno .archivo:hover{
+#div-carpetas .div-alumno .archivo-materia:hover{
     cursor: pointer;
 }
 
 
-#div-carpetas .div-alumno .archivo .rect-img{
+#div-carpetas .div-alumno .archivo-materia .rect-img{
     align-items: center;
     justify-content: center;
     display: flex;
     margin-bottom: 5px;
 }
 
-#div-carpetas .div-alumno .archivo .nombre-archivo{
+#div-carpetas .div-alumno .archivo-materia .nombre-archivo{
     width: 110px;
 }
 
-#div-carpetas .div-alumno .archivo .div-rectangulo{
+#div-carpetas .div-alumno .archivo-materia .div-rectangulo{
     background-color: #202020;
     /* margin-right: 50px; */
     /* margin-top: 25px; */
@@ -233,10 +235,78 @@ body{
     font-size: 18px;
 }
 
-#div-carpetas div span{
-    display: flex;
-    flex-direction: column; /* Coloca los elementos en columnas */
-    align-items: center; /* Centra horizontalmente los elementos */
-    text-align: center; /* Centra horizontalmente el texto dentro de los rectángulos */
-    margin-bottom: 10px;
+/* Carpetas específicas */
+
+#carouselExample{
+    z-index: 0;
+    margin-left: 80px;
 }
+
+.carousel-control-prev, .carousel-control-next {
+    margin-right: -90px; /* Añade margen izquierdo negativo para la flecha izquierda */
+    margin-left: -90px; /* Añade margen derecho negativo para la flecha derecha */
+}
+
+/* Índice */
+#lista-eventos{
+    background-color: #202020;
+    height: 300px;
+    width: 500px;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+
+#lista-eventos div{
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+#lista-eventos div:hover{
+    cursor: pointer;
+}
+
+.fecha-carpeta{
+    margin-left: 10px;
+    margin-right: 20px;
+    font-family: 'Roboto Medium', sans-serif;
+}
+
+.titulo-carpeta{
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.contenido_carpetas{
+    gap: 90px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Volver */
+.volver{
+    background-color: #202020;
+    color: white;
+    margin-top: 40px;
+    margin-left: 400px;
+    width: 100px;
+}
+
+/* Zoom a páginas de carpetas */
+figure.zoom {
+    background-position: 50% 50%;
+    background-size: 170%; /* Ajusta la escala del zoom según tus preferencias */
+    position: relative;
+    width: 450px;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+  figure.zoom img:hover {
+    opacity: 0;
+  }
+  figure.zoom img {
+    transition: opacity .5s;
+    display: block;
+    width: 100%;
+  }
+  
