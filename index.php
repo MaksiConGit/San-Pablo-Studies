@@ -102,69 +102,38 @@
 
                         <span class="nombre-alumno">Maximiliano, Alcaraz</span><hr>
 
-                        <div class="div-alumno">
+                        <?php
+                                $conexion = new mysqli("localhost", "root", "", "san-pablo-studies");
+                                $sql = "SELECT nombre_materia FROM materias";
+                                $res = mysqli_query($conexion, $sql);
 
-                            <div class="archivo-materia">
-                                <div class="rect-img">
-                                    <div class="div-rectangulo"><img src="img/carpeta.png" alt=""></div>
-                                </div>
-                                <div class="nombre-archivo">Prácticas Profesionalizantes I</div>
-                            </div>
-    
-                            <div class="archivo-materia">
-                                <div class="rect-img">
-                                    <div class="div-rectangulo"><img src="img/carpeta.png" alt=""></div>
-                                </div>
-                                <div class="nombre-archivo">Inglés Técnico</div>
-                            </div>
-    
-                            <div class="archivo-materia">
-                                <div class="rect-img">
-                                    <div class="div-rectangulo"><img src="img/carpeta.png" alt=""></div>
-                                </div>
-                                <div class="nombre-archivo">Gestión de Software</div>
-                            </div>
-    
-                            <div class="archivo-materia">
-                                <div class="rect-img">
-                                    <div class="div-rectangulo"><img src="img/carpeta.png" alt=""></div>
-                                </div>
-                                <div class="nombre-archivo">Desarrollo de Sistemas</div>
-                            </div>
-                        </div>
-    
-                        <div class="div-alumno">
+                                $total_filas = mysqli_num_rows($res);
+                                $filas_por_grupo = 4;
 
-                            <div class="archivo-materia">
-                                <div class="rect-img">
-                                    <div class="div-rectangulo"><img src="img/carpeta.png" alt=""></div>
-                                </div>
-                                <div class="nombre-archivo">Estratégias de Negocios</div>
-                            </div>
-    
-                            <div class="archivo-materia">
-                                <div class="rect-img">
-                                    <div class="div-rectangulo"><img src="img/carpeta.png" alt=""></div>
-                                </div>
-                                <div class="nombre-archivo">Estadística I</div>
-                            </div>
-    
-                            <div class="archivo-materia">
-                                <div class="rect-img">
-                                    <div class="div-rectangulo"><img src="img/carpeta.png" alt=""></div>
-                                </div>
-                                <div class="nombre-archivo">UDI II</div>
-                            </div>
-    
-                            <div class="archivo-materia">
-                                <div class="rect-img">
-                                    <div class="div-rectangulo"><img src="img/carpeta.png" alt=""></div>
-                                </div>
-                                <div class="nombre-archivo">Innovación y Desarrollo Emprendedor</div>
-                            </div>
+                                for ($i = 0; $i < $total_filas; $i += $filas_por_grupo) {
+                                    echo "<div class='div-alumno'>";
 
-                        </div>
+                                    // Iterar sobre un grupo de 4 filas
+                                    for ($j = 0; $j < $filas_por_grupo; $j++) {
+                                        $fila = mysqli_fetch_assoc($res);
+                                        if ($fila) {
+                                            echo "<div class='archivo-materia'>
+                                                <div class='rect-img'>
+                                                    <div class='div-rectangulo'><img src='img/carpeta.png' alt=''></div>
+                                                </div>
+                                                <div class='nombre-archivo'>" . $fila['nombre_materia'] . "</div>
+                                            </div>";
+                                        }
+                                    }
 
+                                    echo "</div>"; // Cierre del div-alumno
+                                }
+
+                                $conexion->close();
+
+
+                            ?>
+                            
                     </div>
 
                     <div class="contenido_carpetas">
@@ -269,6 +238,13 @@
                     <div class="contenido_carpetas">
 
                         <p>8</p>
+                        <button class="volver">Volver a Carpetas</button>
+
+                    </div>
+
+                    <div class="contenido_carpetas">
+
+                        <p>9</p>
                         <button class="volver">Volver a Carpetas</button>
 
                     </div>

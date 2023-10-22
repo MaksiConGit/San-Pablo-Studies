@@ -163,7 +163,7 @@ hr{
 
 #div-carpetas .div-alumno{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .div-alumno div img{

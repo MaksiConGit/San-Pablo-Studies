@@ -46,8 +46,8 @@ for (let i = 0; i < archivo_materia.length; i++) {
   })
 
   // Borrar líneas al final de la branch
-  contenidos_carpetas[0].style.display = "flex";
-  opciones_carpetas.style.display = "none";
+  // contenidos_carpetas[0].style.display = "flex";
+  // opciones_carpetas.style.display = "none";
   
   volver[i].addEventListener("click", function (){
 
