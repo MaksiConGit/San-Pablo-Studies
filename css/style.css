@@ -243,8 +243,8 @@ hr{
 }
 
 .carousel-control-prev, .carousel-control-next {
-    margin-right: -90px; /* Añade margen izquierdo negativo para la flecha izquierda */
-    margin-left: -90px; /* Añade margen derecho negativo para la flecha derecha */
+    margin-right: -80px; /* Añade margen izquierdo negativo para la flecha izquierda */
+    margin-left: -80px; /* Añade margen derecho negativo para la flecha derecha */
 }
 
 /* Índice */

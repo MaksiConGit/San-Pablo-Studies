@@ -102,7 +102,8 @@
 
                         <span class="nombre-alumno">Maximiliano, Alcaraz</span><hr>
 
-                        <?php
+                            <?php
+
                                 $conexion = new mysqli("localhost", "root", "", "san-pablo-studies");
                                 $sql = "SELECT nombre_materia FROM materias";
                                 $res = mysqli_query($conexion, $sql);
@@ -131,123 +132,99 @@
 
                                 $conexion->close();
 
-
                             ?>
                             
                     </div>
 
-                    <div class="contenido_carpetas">
+                    <?php
 
-                        <div id="carouselExample" class="carousel slide">
-                            <div class="carousel-inner">
-                              <div class="carousel-item active" >
-                                <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(img/carpetas/pract_profes/1.jpg)">
-                                    <a href="img/carpetas/pract_profes/1.jpg" target="_blank"><img src="img/carpetas/pract_profes/1.jpg" /></a>
-                                  </figure>
-                              </div>
-                              <div class="carousel-item">
-                                <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(img/carpetas/pract_profes/2.jpg)">
-                                    <a href="img/carpetas/pract_profes/2.jpg" target="_blank"><img src="img/carpetas/pract_profes/2.jpg" /></a>
-                                  </figure>
-                              </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button>
-                                                      
-                        </div>
-                        
-                        <div>
+                        $conexion = new mysqli("localhost", "root", "", "san-pablo-studies");
+                        $sql = "SELECT ID_materia FROM materias";
+                        $res = mysqli_query($conexion, $sql);
 
-                            <h2>Índice</h2>
-                            <div id="lista-eventos">
+                        $total_materias = mysqli_num_rows($res) + 1;
 
-                                <span class="fecha-carpeta">4/5</span>
-                                <div>
-                                    <span class="titulo-carpeta">Fases de un sistema informático</span>
-                                    <hr>
-                                </div>
+                        for($i = 1; $i < $total_materias; $i++){
 
-                                <span class="fecha-carpeta">18/5</span>
-                                <div>
-                                    <span class="titulo-carpeta">Requerimientos</span>
-                                    <hr>
-                                </div>
+                            $sql = "SELECT ruta_pagina, fechas_titulos FROM carpetas WHERE id_materia = $i";
+                            $res = mysqli_query($conexion, $sql);
 
-                                <span class="fecha-carpeta">22/5</span>
-                                <div>
-                                    <span class="titulo-carpeta">Conceptos Web</span>
-                                    <hr>
-                                </div>
-                            </div>
+                            echo "<div class='contenido_carpetas'>";
+                            
+                            if (mysqli_num_rows($res) > 0){
+                            
+                                echo "<div id='carousel$i' class='carousel slide'>
+                                        <div class='carousel-inner'>";
 
-                            <button class="volver">Volver a Carpetas</button>
+                                $item_active = true;
 
-                        </div>
+                                
+                                while ($fila_paginas = mysqli_fetch_assoc($res)) {
 
-                    </div>
+                                    if ($item_active){
 
-                    <div class="contenido_carpetas">
+                                        echo "<div class='carousel-item active' >
+                                        <figure class='zoom' onmousemove='zoom(event)' style='background-image: url(" . $fila_paginas['ruta_pagina'] . ")'>
+                                            <a href='" . $fila_paginas['ruta_pagina'] . "' target='_blank'><img src='" . $fila_paginas['ruta_pagina'] . "' /></a>
+                                            </figure>
+                                        </div>";
+                                    }
+                                    else{
+                                        echo "<div class='carousel-item'>
+                                        <figure class='zoom' onmousemove='zoom(event)' style='background-image: url(" . $fila_paginas['ruta_pagina'] . ")'>
+                                            <a href='" . $fila_paginas['ruta_pagina'] . "' target='_blank'><img src='" . $fila_paginas['ruta_pagina'] . "' /></a>
+                                        </figure>
+                                    </div>"; 
+                                    }
 
-                        <p>2</p>
-                        <button class="volver">Volver a Carpetas</button>
+                                    $item_active = false;
 
+                                }
+                                
+                                echo "</div>
+                                        <button class='carousel-control-prev' type='button' data-bs-target='#carousel$i' data-bs-slide='prev'>
+                                        <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+                                        <span class='visually-hidden'>Previous</span>
+                                        </button>
+                                        <button class='carousel-control-next' type='button' data-bs-target='#carousel$i' data-bs-slide='next'>
+                                        <span class='carousel-control-next-icon' ariahidden='true'></span>
+                                        <span class='visually-hidden'>Next</span>
+                                        </button>
+                                    </div>";
 
-                    </div>
+                            }
+                            else{
+                                echo "<div><h2>Carousel en construcción</h2>
+                                <h3>(no saqué más fotos jeje)</h3></div>";
+                            }
 
-                    <div class="contenido_carpetas">
+                            echo "<div>
+                                    <h2>Índice</h2>
+                                    <div id='lista-eventos'>
+                                        <span class='fecha-carpeta'>DD/MM</span>
+                                        <div>
+                                            <span class='titulo-carpeta'>Sin títulos por hoy, pero ¡cada imagen vale más que mil palabras!</span>
+                                            <hr>
+                                        </div>
+                                        <span class='fecha-carpeta'>DD/MM</span>
+                                        <div>
+                                            <span class='titulo-carpeta'>Sin títulos por hoy, pero ¡cada imagen vale más que mil palabras!</span>
+                                            <hr>
+                                        </div>
+                                        <span class='fecha-carpeta'>DD/MM</span>
+                                        <div>
+                                            <span class='titulo-carpeta'>Sin títulos por hoy, pero ¡cada imagen vale más que mil palabras!</span>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <button class='volver'>Volver a Carpetas</button>
+                                </div>";
 
-                        <p>3</p>
-                        <button class="volver">Volver a Carpetas</button>
+                            echo "</div>";
 
-                    </div>
+                        }
 
-                    <div class="contenido_carpetas">
-
-                        <p>4</p>
-                        <button class="volver">Volver a Carpetas</button>
-
-                    </div>
-
-                    <div class="contenido_carpetas">
-
-                        <p>5</p>
-                        <button class="volver">Volver a Carpetas</button>
-
-                    </div>
-
-                    <div class="contenido_carpetas">
-
-                        <p>6</p>
-                        <button class="volver">Volver a Carpetas</button>
-
-                    </div>
-
-                    <div class="contenido_carpetas">
-
-                        <p>7</p>
-                        <button class="volver">Volver a Carpetas</button>
-
-                    </div>
-
-                    <div class="contenido_carpetas">
-
-                        <p>8</p>
-                        <button class="volver">Volver a Carpetas</button>
-
-                    </div>
-
-                    <div class="contenido_carpetas">
-
-                        <p>9</p>
-                        <button class="volver">Volver a Carpetas</button>
-
-                    </div>
+                    ?>
 
                 <div>
 
