@@ -200,7 +200,7 @@
 
                             echo "<div>
                                     <h2>Índice</h2>
-                                    <div id='lista-eventos'>
+                                    <div id='lista-carpetas'>
                                         <span class='fecha-carpeta'>DD/MM</span>
                                         <div>
                                             <span class='titulo-carpeta'>Sin títulos por hoy, pero ¡cada imagen vale más que mil palabras!</span>

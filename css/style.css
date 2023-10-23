@@ -248,7 +248,7 @@ hr{
 }
 
 /* Índice */
-#lista-eventos{
+#lista-carpetas{
     background-color: #202020;
     height: 300px;
     width: 500px;
@@ -256,13 +256,13 @@ hr{
     overflow-y: scroll;
 }
 
-#lista-eventos div{
+#lista-carpetas div{
     padding: 8px;
     display: flex;
     flex-direction: column;
 }
 
-#lista-eventos div:hover{
+#lista-carpetas div:hover{
     cursor: pointer;
 }
 
