@@ -110,7 +110,7 @@
                         echo "<h2>$fecha_actual</h2>";
                     ?>
                 </div>
-                <table id="dias-horarios">
+                <table id="horarios-table">
                     <tr>
                         <th>Hora</th>
                         <th>Lunes</th>
