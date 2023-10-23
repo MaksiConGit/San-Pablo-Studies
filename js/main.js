@@ -1,11 +1,10 @@
 var contenidos = document.getElementsByClassName("contenido_mostrado");
 const opciones = document.getElementsByClassName("opciones_laterales");
 
-
 for (let i = 0; i < opciones.length; i++) {
 
     // Borrar esta línea al final de la branch
-    contenidos[0].style.display = "block"
+    contenidos[5].style.display = "block";
     contenidos[i].style.display = "none";
 
     opciones[i].addEventListener("click", function () {
@@ -140,7 +139,6 @@ function marcarFechasParciales() {
   });
 }
 
-
 const contenido_parciales = document.getElementsByClassName("contenido_parciales");
 const parcial = document.getElementsByClassName("parcial");
 const opciones_parciales = document.getElementById("opciones_parciales");
@@ -173,4 +171,47 @@ for (let i = 0; i < parcial.length; i++) {
     contenido_parciales[i].style.display = "none";
 
   });
+}
+
+const contenidos_carpetas = document.getElementsByClassName("contenido_carpetas");
+const archivo_materia = document.getElementsByClassName("archivo-materia");
+const opciones_carpetas = document.getElementById("opciones_carpetas");
+const volver = document.getElementsByClassName("volver");
+
+for (let i = 0; i < archivo_materia.length; i++) {
+
+  // Borrar esta línea al final de la branch
+  contenidos_carpetas[i].style.display = "none";
+
+  archivo_materia[i].addEventListener("click", function () {
+
+    opciones_carpetas.style.display = "none";
+
+    for (let j = 0; j < contenidos_carpetas.length; j++) {
+      contenidos_carpetas[j].style.display = "none";
+    }
+
+    contenidos_carpetas[i].style.display = "flex";
+
+  })
+
+  // Borrar líneas al final de la branch
+  // contenidos_carpetas[0].style.display = "flex";
+  // opciones_carpetas.style.display = "none";
+  
+  volver[i].addEventListener("click", function (){
+
+    opciones_carpetas.style.display = "block";
+    contenidos_carpetas[i].style.display = "none";
+
+  });
+}
+
+function zoom(e){
+  var zoomer = e.currentTarget;
+  e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+  e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+  x = offsetX/zoomer.offsetWidth*100
+  y = offsetY/zoomer.offsetHeight*100
+  zoomer.style.backgroundPosition = x + '% ' + y + '%';
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-10-2023 a las 22:15:42
+-- Tiempo de generación: 22-10-2023 a las 23:59:02
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -145,6 +145,27 @@ INSERT INTO `biblioteca` (`ID_pdf`, `ID_materia`, `ruta_materia`, `nombre_pdf`) 
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `carpetas`
+--
+
+CREATE TABLE `carpetas` (
+  `id_pagina` int(11) NOT NULL,
+  `id_materia` int(11) NOT NULL,
+  `ruta_pagina` text NOT NULL,
+  `fechas_titulos` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`fechas_titulos`))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `carpetas`
+--
+
+INSERT INTO `carpetas` (`id_pagina`, `id_materia`, `ruta_pagina`, `fechas_titulos`) VALUES
+(3, 3, 'img/carpetas/pract_profes/1.jpg', '{\r\n    \"registros\": [\r\n        {\r\n            \"fecha\": \"\",\r\n            \"titulos\": [\"RNF\"]\r\n        },\r\n        {\r\n            \"fecha\": \"2023-05-22\",\r\n            \"titulos\": [\"Página Web\", \"Sitio Web\"]\r\n        }\r\n    ]\r\n}'),
+(4, 3, 'img/carpetas/pract_profes/2.jpg', '{\r\n    \"registros\": [\r\n        {\r\n            \"fecha\": \"\",\r\n            \"titulos\": [\"RNF\"]\r\n        },\r\n        {\r\n            \"fecha\": \"2023-05-22\",\r\n            \"titulos\": [\"Página Web\", \"Sitio Web\"]\r\n        }\r\n    ]\r\n}');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `cuentas`
 --
 
@@ -241,6 +262,13 @@ ALTER TABLE `biblioteca`
   ADD KEY `ID_materia` (`ID_materia`);
 
 --
+-- Indices de la tabla `carpetas`
+--
+ALTER TABLE `carpetas`
+  ADD PRIMARY KEY (`id_pagina`),
+  ADD KEY `id_materia` (`id_materia`);
+
+--
 -- Indices de la tabla `cuentas`
 --
 ALTER TABLE `cuentas`
@@ -284,6 +312,12 @@ ALTER TABLE `biblioteca`
   MODIFY `ID_pdf` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1044;
 
 --
+-- AUTO_INCREMENT de la tabla `carpetas`
+--
+ALTER TABLE `carpetas`
+  MODIFY `id_pagina` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de la tabla `cuentas`
 --
 ALTER TABLE `cuentas`
@@ -316,6 +350,12 @@ ALTER TABLE `asistencia`
 --
 ALTER TABLE `biblioteca`
   ADD CONSTRAINT `biblioteca_ibfk_1` FOREIGN KEY (`ID_materia`) REFERENCES `materias` (`ID_materia`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `carpetas`
+--
+ALTER TABLE `carpetas`
+  ADD CONSTRAINT `carpetas_ibfk_1` FOREIGN KEY (`id_materia`) REFERENCES `materias` (`ID_materia`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `cuentas`

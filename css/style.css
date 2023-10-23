@@ -29,6 +29,8 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
     padding-top: 7px;
+    /* padding-left: 7px; */
+    z-index: 1;
 }
 
 #menu a {
@@ -101,9 +103,10 @@ header {
     position: fixed;
     width: 100%;
     height: 60px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: flex; /* Utilizamos flexbox para controlar la disposición */
+    justify-content: flex-start; /* Alinea los elementos al principio del div */
+    align-items: center; /* Alinea verticalmente los elementos al centro (opcional) */
+    z-index: 1;
 }
 
 #barraSup span{
@@ -382,6 +385,26 @@ header {
 
 /* Notas */
 #notas-titulos{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-size: 19px;
+}
+
+/* Carpetas */
+
+#carpetas{
+    width: 100%;
+    color: white;
+    display: flex;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+}
+
+#carpetas-titulos{
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
@@ -390,6 +413,13 @@ header {
 }
 
 #div-notas{
+  justify-content: space-around;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-bottom: 15px;
+}
+
+#div-carpetas{
     justify-content: space-around;
     margin-left: 70px;
     margin-right: 70px;
@@ -397,11 +427,22 @@ header {
 }
 
 #div-notas .nombre-materia{
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nombre-alumno{
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
 }
 
 #div-notas hr{
+  margin-top: 10px;
+  margin-bottom: 25px;
+  width: 150px;
+}
+
+hr{
     margin-top: 10px;
     margin-bottom: 25px;
     width: 150px;
@@ -417,17 +458,44 @@ header {
 }
 
 #div-notas .div-materia-notas .archivo{
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 45px;
+}
+
+#div-carpetas .div-alumno{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-alumno div img{
+    width: 50px;
+    height: 50px;
+}
+
+#div-carpetas .div-alumno .archivo-materia{
     justify-content: center;
     align-items: center; 
     margin-bottom: 45px;
 }
 
 #div-notas .div-materia-notas .archivo:hover{
+  cursor: pointer;
+}
+
+#div-carpetas .div-alumno .archivo-materia:hover{
     cursor: pointer;
 }
 
 
 #div-notas .div-materia-notas .archivo .rect-span{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+#div-carpetas .div-alumno .archivo-materia .rect-img{
     align-items: center;
     justify-content: center;
     display: flex;
@@ -441,6 +509,25 @@ header {
 
 #div-notas .div-materia-notas .archivo .div-rectangulo{
     background-color: #202020;
+    /* margin-right: 50px; */
+    /* margin-top: 25px; */
+    padding: 5px;
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#div-carpetas .div-alumno .archivo-materia .nombre-archivo{
+    width: 110px;
+}
+
+#div-carpetas .div-alumno .archivo-materia .div-rectangulo{
+    background-color: #202020;
+    /* margin-right: 50px; */
+    /* margin-top: 25px; */
     padding: 5px;
     width: 100px;
     height: 60px;
@@ -450,6 +537,17 @@ header {
 }
 
 #div-notas .div-materia-notas .flecha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  width: 100px;
+  height: 60px;
+  margin-top: 25px;
+  padding: 5px;
+}
+
+#div-carpetas .div-alumno .flecha{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -468,6 +566,23 @@ header {
 #div-notas .nombre-examen div{
     display: flex;
     justify-content: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-right: 50px;
+    width: 100px;
+    height: 60px;
+    margin-top: 3px;
+    margin-bottom: 35px;
+    padding: 5px;
+}
+
+#div-carpetas .nombre-archivo{
+    display: flex;
+}
+
+#div-carpetas .nombre-archivo div{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
     margin-right: 50px;
     width: 100px;
     height: 60px;
@@ -656,6 +771,10 @@ header {
     background-color: #3A3A3A;
 }
 
+#div-carpetas span{
+    font-size: 18px;
+}
+
 /* Carpetas específicas */
 
 #carouselExample{
@@ -702,3 +821,67 @@ header {
     color: white;
     width: 100px;
 }
+
+/* Índice */
+#lista-carpetas{
+    background-color: #202020;
+    height: 300px;
+    width: 500px;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+
+#lista-carpetas div{
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+#lista-carpetas div:hover{
+    cursor: pointer;
+}
+
+.fecha-carpeta{
+    margin-left: 10px;
+    margin-right: 20px;
+    font-family: 'Roboto Medium', sans-serif;
+}
+
+.titulo-carpeta{
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.contenido_carpetas{
+    gap: 90px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Volver */
+.volver{
+    background-color: #202020;
+    color: white;
+    margin-top: 40px;
+    margin-left: 400px;
+    width: 100px;
+}
+
+/* Zoom a páginas de carpetas */
+figure.zoom {
+    background-position: 50% 50%;
+    background-size: 170%; /* Ajusta la escala del zoom según tus preferencias */
+    position: relative;
+    width: 450px;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+  figure.zoom img:hover {
+    opacity: 0;
+  }
+  figure.zoom img {
+    transition: opacity .5s;
+    display: block;
+    width: 100%;
+  }
+  
