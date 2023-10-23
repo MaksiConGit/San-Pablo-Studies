@@ -123,19 +123,30 @@
 
                             <?php
                                 $conexion= new mysqli("localhost", "root", "", "san-pablo-studies");
-                                $sql = "SELECT id_parcial, id_materia, num_parcial, fecha FROM parciales";
-                                $res=mysqli_query($conexion, $sql);
+                                $sql_parciales = "SELECT id_parcial, id_materia, num_parcial, fecha FROM parciales";
+                                $res_parciales=mysqli_query($conexion, $sql_parciales);
 
+                                while ($fila_parciales = $res_parciales->fetch_assoc()) {
 
+                                    $fecha_parciales = $fila_parciales['fecha'];
+                                    $num_parcial = $fila_parciales['num_parcial'];
+                                    $id_materia = $fila_parciales['id_materia'];
 
-                                // Generar opciones para el menú desplegable
-                                while ($fila_parciales = $res->fetch_assoc()) {
+                                    $sql_materia = "SELECT nombre_materia FROM materias WHERE id_materia = $id_materia";
+                                    $res_materia=mysqli_query($conexion, $sql_materia);
+    
+                                    while ($fila_materia = $res_materia->fetch_assoc()) {
 
-                                    echo "<div>
-                                            <span class='fecha-evento'>" . $fila_parciales['fecha'] . "</span>
-                                            <span class='nombre-evento'>Parcial " . $fila_parciales['id_parcial'] . " de " . $fila_parciales['id_materia'] . "</span>
+                                        $nombre_materia = $fila_materia['nombre_materia'];
+
+                                        echo "<div>
+                                        <span class='fecha-evento'>$fecha_parciales</span>
+                                        <span class='nombre-evento'>Parcial $num_parcial de $nombre_materia</span>
                                         </div>";
+
                                     }
+
+                                }
 
                                 $conexion->close();
                             ?> 
