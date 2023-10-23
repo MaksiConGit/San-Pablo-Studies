@@ -219,14 +219,6 @@
                 </div>
 
             </div>
-            <div id="horarios" class="contenido_mostrado"><h2>Horarios</h2></div>
-            <div id="biblioteca" class="contenido_mostrado"><h2>Biblioteca</h2></div>
-            <div id="asistencia" class="contenido_mostrado"><h2>Asistencia</h2></div>
-            <div id="notas" class="contenido_mostrado"><h2>Notas</h2></div>
-            <div id="carpetas" class="contenido_mostrado"><h2>Carpetas</h2></div>
-            <div id="resumenes" class="contenido_mostrado"><h2>Resúmenes</h2></div>
-            <div id="configuracion" class="contenido_mostrado"><h2>Configuración</h2></div>
-            <div id="bug" class="contenido_mostrado"><h2>Reportar bug</h2></div>
 
         </div>
 
