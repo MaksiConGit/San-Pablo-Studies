@@ -139,36 +139,36 @@ function marcarFechasParciales() {
   });
 }
 
-const contenido_parciales = document.getElementsByClassName("contenido_parciales");
-const parcial = document.getElementsByClassName("parcial");
-const opciones_parciales = document.getElementById("opciones_parciales");
+const contenido_parciales_calendario = document.getElementsByClassName("contenido_parciales_calendario");
+const parcial_calendario = document.getElementsByClassName("parcial_calendario");
+const opciones_parciales_calendario = document.getElementById("opciones_parciales_calendario");
 const volver_calendario = document.getElementsByClassName("volver_calendario");
 
-for (let i = 0; i < parcial.length; i++) {
+for (let i = 0; i < parcial_calendario.length; i++) {
 
   // Borrar esta línea al final de la branch
-  contenido_parciales[i].style.display = "none";
+  contenido_parciales_calendario[i].style.display = "none";
 
-  parcial[i].addEventListener("click", function () {
+  parcial_calendario[i].addEventListener("click", function () {
 
-    opciones_parciales.style.display = "none";
+    opciones_parciales_calendario.style.display = "none";
 
-    for (let j = 0; j < contenido_parciales.length; j++) {
-      contenido_parciales[j].style.display = "none";
+    for (let j = 0; j < contenido_parciales_calendario.length; j++) {
+      contenido_parciales_calendario[j].style.display = "none";
     }
 
-    contenido_parciales[i].style.display = "block";
+    contenido_parciales_calendario[i].style.display = "block";
 
   })
 
   // Borrar líneas al final de la branch
-  // contenido_parciales[0].style.display = "block";
-  // opciones_parciales.style.display = "none";
+  // contenido_parciales_calendario[0].style.display = "block";
+  // opciones_parciales_calendario.style.display = "none";
   
   volver_calendario[i].addEventListener("click", function (){
 
-    opciones_parciales.style.display = "flex";
-    contenido_parciales[i].style.display = "none";
+    opciones_parciales_calendario.style.display = "flex";
+    contenido_parciales_calendario[i].style.display = "none";
 
   });
 }

@@ -108,7 +108,7 @@
 
                 <div id="div-calendario">
 
-                    <div id="opciones_parciales">
+                    <div id="opciones_parciales_calendario">
 
                         <div id="calendar">
                             <div class="buttons">
@@ -171,7 +171,7 @@
                                                 $clase_adicional = '';
                                             }
 
-                                            echo "<div class='parcial'>
+                                            echo "<div class='parcial_calendario'>
                                                     <span class='fecha-parcial-cal $clase_adicional' data-fecha='$fecha_parciales'>$fecha_formateada</span>
                                                     <span class='nombre-materia-cal $clase_adicional'>Parcial $num_parcial de $nombre_materia</span>
                                                 </div>";
@@ -214,7 +214,7 @@
                                     $descripcion = $fila_temario['descripcion'];
                                     $notas = $fila_temario['notas'];
     
-                                    echo "<div class='contenido_parciales'>
+                                    echo "<div class='contenido_parciales_calendario'>
                                             <div>
                                                 <div id='h2-boton'>
                                                     <h2>Parcial $num_parcial de $nombre_materia ($fecha_formateada)</h2>
