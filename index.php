@@ -180,7 +180,8 @@
                             
                             if (mysqli_num_rows($res) > 0){
                             
-                                echo "<div id='carousel1$i' class='carousel slide'>
+                                echo "<style>#carousel1$i{z-index: 0;}</style>
+                                    <div id='carousel1$i' class='carousel slide'>
                                         <div class='carousel-inner'>";
 
                                 $item_active = true;

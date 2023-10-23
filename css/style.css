@@ -23,6 +23,7 @@ body{
     justify-content: space-between;
     padding-top: 7px;
     /* padding-left: 7px; */
+    z-index: 1;
 }
 
 #menu a {
@@ -93,6 +94,7 @@ body{
     display: flex; /* Utilizamos flexbox para controlar la disposición */
     justify-content: flex-start; /* Alinea los elementos al principio del div */
     align-items: center; /* Alinea verticalmente los elementos al centro (opcional) */
+    z-index: 1;
 }
 
 #barraSup span{
@@ -271,7 +273,7 @@ hr{
 
 #div-carpetas .div-alumno{
     display: flex;
-    justify-content: space-around;
+    gap: 40px;
 }
 
 .div-alumno div img{
@@ -399,3 +401,22 @@ hr{
     margin-left: 400px;
     width: 100px;
 }
+
+/* Zoom a páginas de carpetas */
+figure.zoom {
+    background-position: 50% 50%;
+    background-size: 170%; /* Ajusta la escala del zoom según tus preferencias */
+    position: relative;
+    width: 450px;
+    overflow: hidden;
+    cursor: zoom-in;
+  }
+  figure.zoom img:hover {
+    opacity: 0;
+  }
+  figure.zoom img {
+    transition: opacity .5s;
+    display: block;
+    width: 100%;
+  }
+  
