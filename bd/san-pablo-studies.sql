@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-10-2023 a las 23:59:02
+-- Tiempo de generación: 23-10-2023 a las 23:22:31
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -188,6 +188,18 @@ INSERT INTO `cuentas` (`id_cuenta`, `id_alumno`, `nombre_usuario`, `telefono`, `
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `eventos`
+--
+
+CREATE TABLE `eventos` (
+  `id_evento` int(11) NOT NULL,
+  `nombre_evento` text NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `materias`
 --
 
@@ -237,6 +249,102 @@ INSERT INTO `notas` (`id_nota`, `id_alumno`, `id_materia`, `fecha`, `num_parcial
 (4, 2, 1, '2023-10-19', 1, 8),
 (5, 2, 1, '2023-10-19', 2, 8);
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `parciales`
+--
+
+CREATE TABLE `parciales` (
+  `id_parcial` int(11) NOT NULL,
+  `id_materia` int(11) NOT NULL,
+  `num_parcial` int(11) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `parciales`
+--
+
+INSERT INTO `parciales` (`id_parcial`, `id_materia`, `num_parcial`, `fecha`) VALUES
+(1, 1, 1, '2023-10-17'),
+(2, 8, 2, '2023-10-19'),
+(3, 6, 3, '2023-10-26'),
+(4, 3, 3, '2023-10-23');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `resumenes`
+--
+
+CREATE TABLE `resumenes` (
+  `id_resumen` int(11) NOT NULL,
+  `id_alumno` int(11) NOT NULL,
+  `id_parcial` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `resumenes`
+--
+
+INSERT INTO `resumenes` (`id_resumen`, `id_alumno`, `id_parcial`) VALUES
+(1, 2, 1),
+(2, 2, 2),
+(3, 14, 1),
+(4, 21, 2),
+(5, 2, 2),
+(6, 21, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `resumenes_hojas`
+--
+
+CREATE TABLE `resumenes_hojas` (
+  `id_resumen_hoja` int(11) NOT NULL,
+  `id_resumen` int(11) NOT NULL,
+  `ruta_resumen_hoja` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `resumenes_hojas`
+--
+
+INSERT INTO `resumenes_hojas` (`id_resumen_hoja`, `id_resumen`, `ruta_resumen_hoja`) VALUES
+(1, 1, 'img/resumenes/desa_de_sist/p1/1.jpg'),
+(2, 1, 'img/resumenes/desa_de_sist/p1/2.jpg'),
+(3, 1, 'img/resumenes/desa_de_sist/p1/3.jpg'),
+(4, 1, 'img/resumenes/desa_de_sist/p1/4.jpg'),
+(5, 1, 'img/resumenes/desa_de_sist/p1/5.jpg'),
+(6, 1, 'img/resumenes/desa_de_sist/p1/6.jpg'),
+(7, 1, 'img/resumenes/desa_de_sist/p1/7.jpg'),
+(8, 1, 'img/resumenes/desa_de_sist/p1/8.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `temarios`
+--
+
+CREATE TABLE `temarios` (
+  `id_temario` int(11) NOT NULL,
+  `id_parcial` int(11) NOT NULL,
+  `descripcion` text NOT NULL,
+  `notas` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `temarios`
+--
+
+INSERT INTO `temarios` (`id_temario`, `id_parcial`, `descripcion`, `notas`) VALUES
+(1, 4, 'Realizar un SITIO WEB:\r\nEl proyecto puede ser desarrollado por 1 o 2 alumnos.\r\nEl sitio Web puede ser Estático o Dinámico. Debe contener:\r\n1. Una página principal responsive.\r\n2. Al menos 2 páginas secundarias o subpáginas por alumno.\r\n3. Una subpágina debe contener un formulario.\r\n4. Debe contener los lenguajes: HTML, CSS y JS.\r\n5. Puede usar shorthand para CSS y deben indentar el código. Apunte Unidad III.\r\n6. Puede contener animaciones y transiciones en CSS.\r\n7. Puede utilizar Bootstrap u otro CMS.\r\n8. El formulario puede estar conectado a una base de datos.\r\n9. Si la página no es dinámica en el pdf adjunto se debe agregar un mapa\r\nconceptual sobre Back End*. Apunte Unidad IV.\r\n10.s Las instrucciones utilizadas para desarrollar el sitio deben ser comprendidas\r\npor el/los alumno/s que realizaron el proyecto.\r\nAdjuntar un archivo pdf, indicando:\r\n1. Hoja 1: Nombre de la materia. Docente. Nombre del Sitio Web, nombre\r\nintegrante/s del trabajo. Año.\r\n2. Hoja 2: Descripción del Sitio Web, imagen representativa.\r\n3. Hoja/s siguiente/s: imagen de las páginas del sitio desarrollado.\r\n4. *Mapa conceptual sobre Back End, en caso de ser necesario.\r\nPrimera Entrega: día lunes 23/10/2023; en estas instancias el/los alumno/s debe/n\r\ntener el sitio desarrollado en su totalidad para su corrección.\r\nSegunda entrega: Se realizará el 26/10/2023. Con las correcciones y cambios indicados\r\nen la primera entrega. Se entregará el PDF correspondiente.', 'Algunos alumnos entregarán el proyecto el lunes y otros el jueves.'),
+(2, 1, '1. Introducción al desarrollo de sistemas.\r\n2. Fundamentos de la programación.\r\n3. Diseño de algoritmos y estructuras de datos.\r\n4. Desarrollo de aplicaciones web.\r\n5. Desarrollo de aplicaciones móviles.\r\n6. Pruebas y depuración de software.\r\n7. Gestión de proyectos de desarrollo de software.\r\n8. Seguridad informática y protección de datos.', '# Es importante practicar regularmente la resolución de problemas de programación.\r\n# Mantén un control de versiones de tu código para facilitar la colaboración.\r\n# La documentación del software es clave para su mantenimiento a largo plazo.\r\n# Aprende a trabajar en equipo y a comunicarte eficazmente con otros desarrolladores.'),
+(3, 2, '1. Ciclo de vida del desarrollo de software.\r\n2. Planificación y estimación de proyectos.\r\n3. Gestión de calidad del software.\r\n5. Modelos de procesos de software (por ejemplo, Agile, Waterfall).\r\n6. Gestión de riesgos en proyectos de software.\r\n7. Gestión de recursos y equipos de desarrollo.\r\n8. sMétricas y seguimiento del progreso del proyecto.\r\n9. Comunicación y liderazgo en equipos de desarrollo.', '# La comunicación efectiva con el equipo es esencial para el éxito del proyecto.\r\n# La adaptabilidad a diferentes modelos de proceso es importante.\r\n# Aprende a identificar y mitigar riesgos en el desarrollo de software.\r\n# Conoce las mejores prácticas de gestión de proyectos y liderazgo.'),
+(4, 3, '1. Vocabulario técnico en inglés.\r\n2. Lectura y comprensión de documentación técnica.\r\n3. Escritura técnica en inglés (informes, documentación, correos electrónicos).\r\n4. Comunicación oral en entornos profesionales.\r\n5. Presentaciones técnicas en inglés.\r\n6. Conversación y negociación en inglés.\r\n7. Entrevistas de trabajo en inglés.\r\n8. Cultura empresarial en países de habla inglesa.', '# sPractica regularmente la lectura y comprensión de textos técnicos en inglés.\r\n# Mejora tus habilidades de escritura técnica para comunicarte de manera efectiva.\r\n# Participa en grupos de conversación o foros en línea en inglés.\r\n# Prepárate para entrevistas de trabajo en inglés y conoce las diferencias culturales en los entornos laborales.');
+
 --
 -- Índices para tablas volcadas
 --
@@ -276,10 +384,18 @@ ALTER TABLE `cuentas`
   ADD UNIQUE KEY `id_alumno` (`id_alumno`) USING BTREE;
 
 --
+-- Indices de la tabla `eventos`
+--
+ALTER TABLE `eventos`
+  ADD PRIMARY KEY (`id_evento`);
+
+--
 -- Indices de la tabla `materias`
 --
 ALTER TABLE `materias`
-  ADD PRIMARY KEY (`ID_materia`);
+  ADD PRIMARY KEY (`ID_materia`),
+  ADD UNIQUE KEY `nombre_materia` (`nombre_materia`) USING HASH,
+  ADD UNIQUE KEY `nombre_materia_2` (`nombre_materia`) USING HASH;
 
 --
 -- Indices de la tabla `notas`
@@ -288,6 +404,36 @@ ALTER TABLE `notas`
   ADD PRIMARY KEY (`id_nota`),
   ADD KEY `id_alumno` (`id_alumno`,`id_materia`),
   ADD KEY `id_materia` (`id_materia`);
+
+--
+-- Indices de la tabla `parciales`
+--
+ALTER TABLE `parciales`
+  ADD PRIMARY KEY (`id_parcial`),
+  ADD KEY `id_materia` (`id_materia`),
+  ADD KEY `nombre_materia` (`id_materia`);
+
+--
+-- Indices de la tabla `resumenes`
+--
+ALTER TABLE `resumenes`
+  ADD PRIMARY KEY (`id_resumen`),
+  ADD KEY `id_alumno` (`id_alumno`),
+  ADD KEY `id_parcial` (`id_parcial`);
+
+--
+-- Indices de la tabla `resumenes_hojas`
+--
+ALTER TABLE `resumenes_hojas`
+  ADD PRIMARY KEY (`id_resumen_hoja`),
+  ADD KEY `id_resumen` (`id_resumen`);
+
+--
+-- Indices de la tabla `temarios`
+--
+ALTER TABLE `temarios`
+  ADD PRIMARY KEY (`id_temario`),
+  ADD KEY `id_parcial` (`id_parcial`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -324,6 +470,12 @@ ALTER TABLE `cuentas`
   MODIFY `id_cuenta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT de la tabla `eventos`
+--
+ALTER TABLE `eventos`
+  MODIFY `id_evento` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `materias`
 --
 ALTER TABLE `materias`
@@ -334,6 +486,30 @@ ALTER TABLE `materias`
 --
 ALTER TABLE `notas`
   MODIFY `id_nota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `parciales`
+--
+ALTER TABLE `parciales`
+  MODIFY `id_parcial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `resumenes`
+--
+ALTER TABLE `resumenes`
+  MODIFY `id_resumen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de la tabla `resumenes_hojas`
+--
+ALTER TABLE `resumenes_hojas`
+  MODIFY `id_resumen_hoja` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `temarios`
+--
+ALTER TABLE `temarios`
+  MODIFY `id_temario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
@@ -369,6 +545,31 @@ ALTER TABLE `cuentas`
 ALTER TABLE `notas`
   ADD CONSTRAINT `notas_ibfk_1` FOREIGN KEY (`id_alumno`) REFERENCES `alumnos` (`id_alumno`) ON UPDATE CASCADE,
   ADD CONSTRAINT `notas_ibfk_2` FOREIGN KEY (`id_materia`) REFERENCES `materias` (`ID_materia`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `parciales`
+--
+ALTER TABLE `parciales`
+  ADD CONSTRAINT `parciales_ibfk_1` FOREIGN KEY (`id_materia`) REFERENCES `materias` (`ID_materia`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `resumenes`
+--
+ALTER TABLE `resumenes`
+  ADD CONSTRAINT `resumenes_ibfk_2` FOREIGN KEY (`id_alumno`) REFERENCES `alumnos` (`id_alumno`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `resumenes_ibfk_3` FOREIGN KEY (`id_parcial`) REFERENCES `parciales` (`id_parcial`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `resumenes_hojas`
+--
+ALTER TABLE `resumenes_hojas`
+  ADD CONSTRAINT `resumenes_hojas_ibfk_1` FOREIGN KEY (`id_resumen`) REFERENCES `resumenes` (`id_resumen`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `temarios`
+--
+ALTER TABLE `temarios`
+  ADD CONSTRAINT `temarios_ibfk_1` FOREIGN KEY (`id_parcial`) REFERENCES `parciales` (`id_parcial`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
