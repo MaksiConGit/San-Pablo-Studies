@@ -231,3 +231,171 @@ body{
     margin-bottom: 35px;
     padding: 5px;
 }
+
+
+#carpetas{
+    width: 100%;
+    color: white;
+    display: flex;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+}
+
+#carpetas-titulos{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 19px;
+}
+
+#div-carpetas{
+    justify-content: space-around;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 15px;
+}
+
+.nombre-alumno{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+hr{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 150px;
+}
+
+#div-carpetas .div-alumno{
+    display: flex;
+    justify-content: space-around;
+}
+
+.div-alumno div img{
+    width: 50px;
+    height: 50px;
+}
+
+#div-carpetas .div-alumno .archivo-materia{
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 45px;
+}
+
+#div-carpetas .div-alumno .archivo-materia:hover{
+    cursor: pointer;
+}
+
+
+#div-carpetas .div-alumno .archivo-materia .rect-img{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+#div-carpetas .div-alumno .archivo-materia .nombre-archivo{
+    width: 110px;
+}
+
+#div-carpetas .div-alumno .archivo-materia .div-rectangulo{
+    background-color: #202020;
+    /* margin-right: 50px; */
+    /* margin-top: 25px; */
+    padding: 5px;
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div-carpetas .div-alumno .flecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    width: 100px;
+    height: 60px;
+    margin-top: 25px;
+    padding: 5px;
+}
+
+#div-carpetas .nombre-archivo{
+    display: flex;
+}
+
+#div-carpetas .nombre-archivo div{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-right: 50px;
+    width: 100px;
+    height: 60px;
+    margin-top: 3px;
+    margin-bottom: 35px;
+    padding: 5px;
+}
+
+#div-carpetas span{
+    font-size: 18px;
+}
+
+/* Carpetas específicas */
+
+#carouselExample{
+    z-index: 0;
+    margin-left: 80px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    margin-right: -80px; /* Añade margen izquierdo negativo para la flecha izquierda */
+    margin-left: -80px; /* Añade margen derecho negativo para la flecha derecha */
+}
+
+/* Índice */
+#lista-eventos{
+    background-color: #202020;
+    height: 300px;
+    width: 500px;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+
+#lista-eventos div{
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+#lista-eventos div:hover{
+    cursor: pointer;
+}
+
+.fecha-carpeta{
+    margin-left: 10px;
+    margin-right: 20px;
+    font-family: 'Roboto Medium', sans-serif;
+}
+
+.titulo-carpeta{
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.contenido_carpetas{
+    gap: 90px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Volver */
+.volver{
+    background-color: #202020;
+    color: white;
+    margin-top: 40px;
+    margin-left: 400px;
+    width: 100px;
+}
