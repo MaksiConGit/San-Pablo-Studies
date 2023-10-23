@@ -708,7 +708,7 @@ hr{
     color: gray;
 }
 
-#opciones_parciales{
+#opciones_parciales_calendario{
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
@@ -789,11 +789,11 @@ hr{
 
 /* Temario */
 
-.contenido_parciales div{
+.contenido_parciales_calendario div{
     margin-left: 20px;
 }
 
-.contenido_parciales div div{
+.contenido_parciales_calendario div div{
     display: flex;
     justify-content: space-between;
 }
