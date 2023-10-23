@@ -241,3 +241,126 @@ body{
     text-align: center; /* Centra horizontalmente el texto dentro de los rectángulos */
     margin-bottom: 10px;
 }
+
+#biblioteca{
+    width: 100%;
+    color: white;
+    display: flex;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+}
+
+#biblioteca-titulos{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 19px;
+}
+
+#pdfs-biblioteca{
+    justify-content: space-around;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 15px;
+}
+
+#pdfs-biblioteca .nombre-materia{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#pdfs-biblioteca hr{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width: 150px;
+}
+
+#pdfs-biblioteca .div-materia{
+    display: flex;
+}
+
+.div-materia{
+    overflow-x: scroll;
+    margin-bottom: 45px;
+}
+
+.div-materia div img{
+    width: 50px;
+    height: 50px;
+}
+
+#pdfs-biblioteca .div-materia .archivo{
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 15px;
+    margin-right: 100px;
+}
+
+#pdfs-biblioteca .div-materia .archivo:hover{
+    cursor: pointer;
+}
+
+
+#pdfs-biblioteca .div-materia .archivo .rect-img{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+#pdfs-biblioteca .div-materia .archivo .nombre-archivo{
+    width: 110px;
+}
+
+#pdfs-biblioteca .div-materia .archivo .div-rectangulo{
+    background-color: #202020;
+    /* margin-right: 50px; */
+    /* margin-top: 25px; */
+    padding: 5px;
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pdfs-biblioteca .div-materia .flecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    width: 100px;
+    height: 60px;
+    margin-top: 25px;
+    padding: 5px;
+}
+
+#pdfs-biblioteca .nombre-archivo{
+    display: flex;
+}
+
+#pdfs-biblioteca .nombre-archivo div{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-right: 50px;
+    width: 100px;
+    height: 60px;
+    margin-top: 3px;
+    margin-bottom: 35px;
+    padding: 5px;
+}
+
+#pdfs-biblioteca span{
+    font-size: 18px;
+}
+
+#pdfs-biblioteca div span{
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columnas */
+    align-items: center; /* Centra horizontalmente los elementos */
+    text-align: center; /* Centra horizontalmente el texto dentro de los rectángulos */
+    margin-bottom: 10px;
+}
