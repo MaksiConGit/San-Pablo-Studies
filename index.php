@@ -101,8 +101,75 @@
 
             <div id="calendario" class="contenido_mostrado"><h2>Calendario</h2></div>
 
-            <div id="horarios" class="contenido_mostrado"><h2>Horarios</h2></div> 
-                       
+            <div id="horarios" class="contenido_mostrado">
+                <div id="horarios-titulos">
+                    <h2>Horarios</h2>       
+                    <h2>Análisis de Sistemas 2°do</h2>
+                    <?php
+                        $fecha_actual = date('d/m/Y');
+                        echo "<h2>$fecha_actual</h2>";
+                    ?>
+                </div>
+                <table id="dias-horarios">
+                    <tr>
+                        <th>Hora</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                    </tr>
+                    <tr>
+                        <td>19:00</td>
+                        <td>Prácticas Profesional. I</td>
+                        <td>Desarrollo de Sistemas</td>
+                        <td>Estadística I</td>
+                        <td>Prácticas Profesional. I</td>
+                        <td>Innovac. Y Des. Emp</td>
+                    </tr>
+                    <tr>
+                        <td>19:40</td>
+                        <td>Prácticas Profesional. I</td>
+                        <td>Desarrollo de Sistemas</td>
+                        <td>Estadística I</td>
+                        <td>Prácticas Profesional. I</td>
+                        <td>Innovac. Y Des. Emp</td>
+                    </tr>
+                    <tr>
+                        <td>20:30</td>
+                        <td>Inglés Técnico II</td>
+                        <td>Desarrollo de Sistemas</td>
+                        <td>Estadística I</td>
+                        <td>UDI II</td>
+                        <td>Innovac. Y Des. Emp</td>
+                    </tr>
+                    <tr>
+                        <td>21:10</td>
+                        <td>Inglés Técnico II</td>
+                        <td>Estratégias de Negocios</td>
+                        <td>Desarrollo de Sistemas</td>
+                        <td>UDI II</td>
+                        <td class="sin-clases"></td>
+                    </tr>
+                    <tr>
+                        <td>22:00</td>
+                        <td>Gestión de Software II</td>
+                        <td>Estratégias de Negocios</td>
+                        <td>Gestión de Software II</td>
+                        <td class="sin-clases"></td>
+                        <td class="sin-clases"></td>
+                    </tr>
+                    <tr>
+                        <td>22:40</td>
+                        <td>Gestión de Software II</td>
+                        <td>Estratégias de Negocios</td>
+                        <td>Gestión de Software II</td>
+                        <td class="sin-clases"></td>
+                        <td class="sin-clases"></td>
+                    </tr>
+                </table>
+            </div>
+                                   
             <div id="biblioteca" class="contenido_mostrado">
 
                 <div id="biblioteca-titulos"> 
@@ -386,7 +453,7 @@
                 </div>
 
             </div>
-
+            
             <div id="carpetas" class="contenido_mostrado"><h2>Carpetas</h2></div>
             <div id="resumenes" class="contenido_mostrado"><h2>Resúmenes</h2></div>
             <div id="configuracion" class="contenido_mostrado"><h2>Configuración</h2></div>

@@ -487,3 +487,65 @@ table {
     text-align: center;
     margin-bottom: 10px;
 }
+
+
+/* Horarios */
+
+#horarios-titulos{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#dias-horarios {
+    width: 100%;
+    color: white;
+    margin-top: 40px;
+}
+
+#dias-horarios table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#dias-horarios th,
+#dias-horarios td {
+    border: 1px solid #4c4c4c;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+    width: 14.2857%;
+    height: 50px; /* Ajusta la altura al 100% de la ventana del navegador */
+    background-color: #3A3A3A;
+}
+
+#dias-horarios th {
+    background-color: #2B2B2B;
+    color: white;
+}
+
+#dias-horarios .sin-clases {
+    background-color: #AAAAAA;
+}
+
+#horarios-titulos {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#horarios-titulos h2 {
+    margin: 0;
+}
+
+#dias-horarios th {
+    background-color: #2B2B2B;
+    color: white;
+}
+
+#dias-horarios td {
+    background-color: #202020;
+}
+
