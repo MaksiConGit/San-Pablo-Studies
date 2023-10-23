@@ -176,13 +176,13 @@ body{
     margin-top: 40px;
 }
 
-table {
+#calendario-table table {
     border-collapse: collapse;
     width: 100%;
     margin-right: 40px;
   }
   
-  td, th {
+  #calendario-table td, #calendario-table th {
     border: 1px solid #4c4c4c;
     padding: 8px;
     text-align: center;
@@ -190,12 +190,12 @@ table {
     width: 14.2857%; /* Asegura que haya un 100% en total (7 columnas) */
   }
   
-  thead {
+  #calendario-table thead {
     background-color: #2B2B2B;
     color: #ffffff;
   }
 
-  th{
+  #calendario-table th{
     background-color: #202020;
   }
 

@@ -100,7 +100,7 @@
                                     <button class="cambiar-mes" id="nextMonth"><img src="img/flecha-derecha.png" alt="" class="flechas"></button>
                                 </div>
                             </div>
-                            <table>
+                            <table id="calendario-table">
                                 <thead>
                                     <tr>
                                         <th>Dom</th>
