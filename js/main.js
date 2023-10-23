@@ -103,7 +103,7 @@ nextButton.addEventListener('click', nextMonth);
 
 // Función para marcar las fechas de los parciales
 function marcarFechasParciales() {
-  const elementosFechaEvento = document.querySelectorAll('.fecha-evento');
+  const elementosFechaEvento = document.querySelectorAll('.fecha-parcial-cal');
   elementosFechaEvento.forEach((elemento) => {
     const fechaEvento = elemento.getAttribute('data-fecha');
     const fechaPartes = fechaEvento.split('-');
@@ -124,3 +124,37 @@ function marcarFechasParciales() {
   });
 }
 
+
+const contenido_parciales = document.getElementsByClassName("contenido_parciales");
+const parcial = document.getElementsByClassName("parcial");
+const opciones_parciales = document.getElementById("opciones_parciales");
+const volver_calendario = document.getElementsByClassName("volver_calendario");
+
+for (let i = 0; i < parcial.length; i++) {
+
+  // Borrar esta línea al final de la branch
+  contenido_parciales[i].style.display = "none";
+
+  parcial[i].addEventListener("click", function () {
+
+    opciones_parciales.style.display = "none";
+
+    for (let j = 0; j < contenido_parciales.length; j++) {
+      contenido_parciales[j].style.display = "none";
+    }
+
+    contenido_parciales[i].style.display = "block";
+
+  })
+
+  // Borrar líneas al final de la branch
+  // contenido_parciales[0].style.display = "block";
+  // opciones_parciales.style.display = "none";
+  
+  volver_calendario[i].addEventListener("click", function (){
+
+    opciones_parciales.style.display = "flex";
+    contenido_parciales[i].style.display = "none";
+
+  });
+}

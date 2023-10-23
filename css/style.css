@@ -140,35 +140,7 @@ body{
     margin-bottom: 15px;
 }
 
-#dias-calendario{
-    display: flex;
-    justify-content: space-around;
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-bottom: 15px;
-}
-
-#dias-calendario div div{
-    background-color: #202020;
-    width: 100px;
-    height: 50px;
-    margin-bottom: 5px;
-    padding: 5px
-}
-
-#dias-calendario div .dia-otro-mes{
-    background-color: #3A3A3A;
-}
-
-#dias-calendario div span{
-    display: flex;
-    flex-direction: column; /* Coloca los elementos en columnas */
-    align-items: center; /* Centra horizontalmente los elementos */
-    text-align: center; /* Centra horizontalmente el texto dentro de los rectángulos */
-    margin-bottom: 10px;
-}
-
-#lista-eventos{
+#lista-parciales-cal{
     background-color: #202020;
     height: 300px;
     width: 500px;
@@ -176,21 +148,21 @@ body{
     overflow-y: scroll;
 }
 
-#lista-eventos div{
+#lista-parciales-cal div{
     padding: 8px;
 }
 
-#lista-eventos div:hover{
+#lista-parciales-cal div:hover{
     cursor: pointer;
 }
 
-.fecha-evento{
+.fecha-parcial-cal{
     margin-left: 10px;
     margin-right: 20px;
     font-family: 'Roboto Medium', sans-serif;
 }
 
-.nombre-evento{
+.nombre-materia-cal{
     font-size: 20px;
 }
 
@@ -198,7 +170,7 @@ body{
     color: gray;
 }
 
-#div-calendario{
+#opciones_parciales{
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
@@ -232,7 +204,6 @@ table {
     color: white;
 }
 
-
 #calendar{
     gap: 30px;
 }
@@ -248,7 +219,7 @@ table {
     height: 30px;
 }
 
-#div-calendario .buttons {
+#div-calendario .opciones_laterales .buttons {
     text-align: center;
 }
 
@@ -260,4 +231,51 @@ table {
 
 .parciales-marcados{
     background-color: #3A3A3A;
+}
+
+/* Carpetas específicas */
+
+#carouselExample{
+    z-index: 0;
+    margin-left: 80px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    margin-right: -80px;
+    margin-left: -80px;
+}
+
+/* Temario */
+
+.contenido_parciales div{
+    margin-left: 20px;
+}
+
+.contenido_parciales div div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#descripcion_temario{
+    background-color: #202020;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 180px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#notaciones_temario{
+    background-color: #202020;
+    margin-top: 25px;
+    height: 180px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+/* Volver */
+.volver_calendario{
+    background-color: #202020;
+    color: white;
+    width: 100px;
 }
