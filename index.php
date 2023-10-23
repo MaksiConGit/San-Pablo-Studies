@@ -95,9 +95,9 @@
                     <h2>Resúmenes</h2>
                 </div>
 
-                <div id="div-carpetas">
+                <div id="div-resumenes">
 
-                    <div id="opciones_carpetas">
+                    <div id="opciones_parciales">
 
                         <?php
 
@@ -138,11 +138,11 @@
                 
                                                 while ($fila_nombre_materia = $res_nombre_materia->fetch_assoc()) {
                                                     $nombre_materia = $fila_nombre_materia['nombre_materia']; 
-                                                        echo "<div class='archivo-materia'>
+                                                        echo "<div class='parcial'>
                                                         <div class='rect-img'>
                                                             <div class='div-rectangulo'><h5>Parcial $id_parcial</h5></div>
                                                         </div>
-                                                        <div class='nombre-archivo'>" . $fila_nombre_materia['nombre_materia'] . "</div>
+                                                        <div class='nombre-materia'>" . $fila_nombre_materia['nombre_materia'] . "</div>
                                                     </div>";
 
                                                     $lastAlumnoId = $id_alumno;
@@ -176,7 +176,7 @@
                             $sql = "SELECT ruta_resumen_hoja FROM resumenes_hojas WHERE id_resumen = $i";
                             $res = mysqli_query($conexion, $sql);
 
-                            echo "<div class='contenido_carpetas'>";
+                            echo "<div class='contenido_parciales'>";
                             
                             if (mysqli_num_rows($res) > 0){
                             
@@ -228,24 +228,24 @@
 
                             echo "<div>
                                     <h2>Índice</h2>
-                                    <div id='lista-eventos'>
-                                        <span class='fecha-carpeta'>DD/MM</span>
+                                    <div id='lista-titulos-resumenes'>
+                                        <span class='fecha-hoja-resumen'>DD/MM</span>
                                         <div>
-                                            <span class='titulo-carpeta'>Sin títulos por hoy, pero ¡cada imagen vale más que mil palabras!</span>
+                                            <span class='titulo-hoja-resumen'>Sin títulos por hoy, pero ¡cada imagen vale más que mil palabras!</span>
                                             <hr>
                                         </div>
-                                        <span class='fecha-carpeta'>DD/MM</span>
+                                        <span class='fecha-hoja-resumen'>DD/MM</span>
                                         <div>
-                                            <span class='titulo-carpeta'>Sin títulos por hoy, pero ¡cada imagen vale más que mil palabras!</span>
+                                            <span class='titulo-hoja-resumen'>Sin títulos por hoy, pero ¡cada imagen vale más que mil palabras!</span>
                                             <hr>
                                         </div>
-                                        <span class='fecha-carpeta'>DD/MM</span>
+                                        <span class='fecha-hoja-resumen'>DD/MM</span>
                                         <div>
-                                            <span class='titulo-carpeta'>Sin títulos por hoy, pero ¡cada imagen vale más que mil palabras!</span>
+                                            <span class='titulo-hoja-resumen'>Sin títulos por hoy, pero ¡cada imagen vale más que mil palabras!</span>
                                             <hr>
                                         </div>
                                     </div>
-                                    <button class='volver'>Volver a Carpetas</button>
+                                    <button class='volver_parciales'>Volver a Carpetas</button>
                                 </div>";
 
                             echo "</div>";

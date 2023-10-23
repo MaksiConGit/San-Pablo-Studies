@@ -150,12 +150,12 @@ body{
     margin-bottom: 15px;
 }
 
-#div-resumenes .nombre-alumno{
+.nombre-alumno{
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
 }
 
-#div-resumenes hr{
+hr{
     margin-top: 10px;
     margin-bottom: 25px;
     width: 150px;
@@ -163,11 +163,7 @@ body{
 
 #div-resumenes .div-alumno{
     display: flex;
-}
-
-.div-alumno{
-    overflow-x: scroll;
-    margin-bottom: 45px;
+    gap: 40px;
 }
 
 .div-alumno div img{
@@ -178,8 +174,7 @@ body{
 #div-resumenes .div-alumno .parcial{
     justify-content: center;
     align-items: center; 
-    margin-bottom: 15px;
-    margin-right: 100px;
+    margin-bottom: 45px;
 }
 
 #div-resumenes .div-alumno .parcial:hover{
@@ -234,114 +229,7 @@ body{
     padding: 5px;
 }
 
-
-#carpetas{
-    width: 100%;
-    color: white;
-    display: flex;
-    padding-top: 15px;
-    padding-left: 30px;
-    padding-bottom: 15px;
-    padding-right: 30px;
-}
-
-#carpetas-titulos{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    font-size: 19px;
-}
-
-#div-carpetas{
-    justify-content: space-around;
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-bottom: 15px;
-}
-
-.nombre-alumno{
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-}
-
-hr{
-    margin-top: 10px;
-    margin-bottom: 25px;
-    width: 150px;
-}
-
-#div-carpetas .div-alumno{
-    display: flex;
-    gap: 40px;
-}
-
-.div-alumno div img{
-    width: 50px;
-    height: 50px;
-}
-
-#div-carpetas .div-alumno .archivo-materia{
-    justify-content: center;
-    align-items: center; 
-    margin-bottom: 45px;
-}
-
-#div-carpetas .div-alumno .archivo-materia:hover{
-    cursor: pointer;
-}
-
-
-#div-carpetas .div-alumno .archivo-materia .rect-img{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-bottom: 5px;
-}
-
-#div-carpetas .div-alumno .archivo-materia .nombre-archivo{
-    width: 110px;
-}
-
-#div-carpetas .div-alumno .archivo-materia .div-rectangulo{
-    background-color: #202020;
-    /* margin-right: 50px; */
-    /* margin-top: 25px; */
-    padding: 5px;
-    width: 100px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#div-carpetas .div-alumno .flecha{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 50px;
-    width: 100px;
-    height: 60px;
-    margin-top: 25px;
-    padding: 5px;
-}
-
-#div-carpetas .nombre-archivo{
-    display: flex;
-}
-
-#div-carpetas .nombre-archivo div{
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    margin-right: 50px;
-    width: 100px;
-    height: 60px;
-    margin-top: 3px;
-    margin-bottom: 35px;
-    padding: 5px;
-}
-
-#div-carpetas span{
+#div-resumenes span{
     font-size: 18px;
 }
 
@@ -353,12 +241,12 @@ hr{
 }
 
 .carousel-control-prev, .carousel-control-next {
-    margin-right: -80px; /* Añade margen izquierdo negativo para la flecha izquierda */
-    margin-left: -80px; /* Añade margen derecho negativo para la flecha derecha */
+    margin-right: -80px;
+    margin-left: -80px;
 }
 
 /* Índice */
-#lista-eventos{
+#lista-titulos-resumenes{
     background-color: #202020;
     height: 300px;
     width: 500px;
@@ -366,35 +254,35 @@ hr{
     overflow-y: scroll;
 }
 
-#lista-eventos div{
+#lista-titulos-resumenes div{
     padding: 8px;
     display: flex;
     flex-direction: column;
 }
 
-#lista-eventos div:hover{
+#lista-titulos-resumenes div:hover{
     cursor: pointer;
 }
 
-.fecha-carpeta{
+.fecha-hoja-resumen{
     margin-left: 10px;
     margin-right: 20px;
     font-family: 'Roboto Medium', sans-serif;
 }
 
-.titulo-carpeta{
+.titulo-hoja-resumen{
     font-size: 20px;
     margin-left: 30px;
 }
 
-.contenido_carpetas{
+.contenido_parciales{
     gap: 90px;
     display: flex;
     justify-content: space-around;
 }
 
 /* Volver */
-.volver{
+.volver_parciales{
     background-color: #202020;
     color: white;
     margin-top: 40px;
