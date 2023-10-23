@@ -120,9 +120,26 @@
                         <h2>Este mes</h2>
 
                         <div id="lista-eventos">
-                            <div><span class="fecha-evento">10/10</span><span class="nombre-evento">Parcial de Desarrollo de Sistemas</span></div>
-                            <div><span class="fecha-evento">23/10</span><span class="nombre-evento">Tarea de Estratégias de Negocios</span></div>
-                            <div><span class="fecha-evento">28/10</span><span class="nombre-evento">Recuperatorio de Gestión de Software</span></div>
+
+                            <?php
+                                $conexion= new mysqli("localhost", "root", "", "san-pablo-studies");
+                                $sql = "SELECT id_parcial, id_materia, num_parcial, fecha FROM parciales";
+                                $res=mysqli_query($conexion, $sql);
+
+
+
+                                // Generar opciones para el menú desplegable
+                                while ($fila_parciales = $res->fetch_assoc()) {
+
+                                    echo "<div>
+                                            <span class='fecha-evento'>" . $fila_parciales['fecha'] . "</span>
+                                            <span class='nombre-evento'>Parcial " . $fila_parciales['id_parcial'] . " de " . $fila_parciales['id_materia'] . "</span>
+                                        </div>";
+                                    }
+
+                                $conexion->close();
+                            ?> 
+
                         </div>
                         
                     </div>
