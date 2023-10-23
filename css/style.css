@@ -194,6 +194,10 @@ body{
     font-size: 20px;
 }
 
+.parcial-pasado{
+    color: gray;
+}
+
 #div-calendario{
     display: flex;
     justify-content: space-around;
@@ -224,7 +228,7 @@ table {
   }
 
   #calendar td.today {
-    background-color: #007BFF;
+    border: 2px solid #007BFF;
     color: white;
 }
 

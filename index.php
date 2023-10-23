@@ -117,14 +117,17 @@
 
                     <div>
 
-                        <h2>Este mes</h2>
+                        <h2>Fecha de parciales</h2>
 
                         <div id="lista-eventos">
 
                             <?php
                                 $conexion = new mysqli("localhost", "root", "", "san-pablo-studies");
-                                $sql_parciales = "SELECT id_parcial, id_materia, num_parcial, fecha FROM parciales";
+                                $sql_parciales = "SELECT id_parcial, id_materia, num_parcial, fecha FROM parciales ORDER BY fecha";
                                 $res_parciales = mysqli_query($conexion, $sql_parciales);
+
+                                // Obtener la fecha actual en formato YYYY-MM-DD
+                                $fecha_actual = date('Y-m-d');
 
                                 while ($fila_parciales = $res_parciales->fetch_assoc()) {
                                     $fecha_parciales = $fila_parciales['fecha'];
@@ -140,14 +143,22 @@
                                         // Reformatea la fecha al formato DD/MM
                                         $fecha_formateada = date('d/m', strtotime($fecha_parciales));
 
+                                        // Compara las fechas usando un if
+                                        if (strtotime($fecha_parciales) < strtotime($fecha_actual)) {
+                                            $clase_adicional = 'parcial-pasado';
+                                        } else {
+                                            $clase_adicional = '';
+                                        }
+
                                         echo "<div>
-                                                <span class='fecha-evento' data-fecha='$fecha_parciales'>$fecha_formateada</span>
-                                                <span class='nombre-evento'>Parcial $num_parcial de $nombre_materia</span>
+                                                <span class='fecha-evento $clase_adicional' data-fecha='$fecha_parciales'>$fecha_formateada</span>
+                                                <span class='nombre-evento $clase_adicional'>Parcial $num_parcial de $nombre_materia</span>
                                             </div>";
                                     }
                                 }
 
                                 $conexion->close();
+
                             ?>
 
 
