@@ -305,7 +305,7 @@
                             $problem_socio =  $fila_asisten['problem_socio_cont'];
                             $asist_total =  $fila_asisten['asist_total'];
 
-                            echo " <table>
+                            echo " <table id='asistencias-table'>
                             <thead>
                               <tr>
                                 <th>Materia</th>

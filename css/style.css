@@ -352,29 +352,29 @@ header {
   width: 150px;
 }
 
-table {
+#asistencias-table {
     border-collapse: collapse;
     width: 100%;
     background-color: #202020;
   }
   
-  th, td {
+  #asistencias-table  th, td {
     border: 1px solid #2B2B2B;
     padding: 8px;
     text-align: center;
     font-size: 18px;
   }
-  thead {
+  #asistencias-table  thead {
     background-color: #202020;
     color: #ffffff;
   }
   
-  tr:nth-child(2n) {
+  #asistencias-table  tr:nth-child(2n) {
     background-color: #2B2B2B;
     color: #ffffff;
   }
   
-  th {
+  #asistencias-table  th {
     background-color: #202020;
     color: #ffffff;
   }
