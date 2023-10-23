@@ -94,7 +94,7 @@
                     <h2>Resúmenes</h2>
                 </div>
 
-                <div id="pdfs-biblioteca">
+                <div id="div-resumenes">
 
                     <?php
 
@@ -116,8 +116,8 @@
                                     $nombres_alumnos = $fila_nombres_alumnos['nombres'];
                                     $apellidos_alumnos = $fila_nombres_alumnos['apellidos'];
 
-                                    echo "<span class='nombre-materia'>$nombres_alumnos, $apellidos_alumnos</span><hr>
-                                    <div class='div-materia'>";
+                                    echo "<span class='nombre-alumno'>$nombres_alumnos, $apellidos_alumnos</span><hr>
+                                    <div class='div-alumno'>";
             
                                     $sql_parcial = "SELECT id_parcial FROM resumenes WHERE id_alumno = $id_alumno";
                                     $res_parcial=mysqli_query($conexion, $sql_parcial);
@@ -135,11 +135,11 @@
             
                                             while ($fila_nombre_materia = $res_nombre_materia->fetch_assoc()) {
                                                 $nombre_materia = $fila_nombre_materia['nombre_materia']; 
-                                                echo "<div class='archivo'>
+                                                echo "<div class='parcial'>
                                                         <div class='rect-img'>
                                                             <div class='div-rectangulo'><h2>Parcial $id_parcial</h2></div>
                                                         </div>
-                                                        <div class='nombre-archivo'>$nombre_materia</div>
+                                                        <div class='nombre-materia'>$nombre_materia</div>
                                                     </div>";
 
                                                 $lastAlumnoId = $id_alumno;
@@ -153,7 +153,6 @@
 
                             }
 
-                            
                         }
                         
                         $conexion->close();
