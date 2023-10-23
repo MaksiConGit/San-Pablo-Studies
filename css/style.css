@@ -222,3 +222,34 @@ table {
   th{
     background-color: #202020;
   }
+
+  #calendar td.today {
+    background-color: #007BFF;
+    color: white;
+}
+
+
+#calendar{
+    gap: 30px;
+}
+
+.cambiar-mes{
+    background-color: #202020;
+    color: white;
+    font-size: 18px;
+    height: 40px;
+}
+
+.flechas{
+    height: 30px;
+}
+
+#div-calendario .buttons {
+    text-align: center;
+}
+
+#botones-mes{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
