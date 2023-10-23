@@ -26,74 +26,101 @@ for (let i = 0; i < opciones.length; i++) {
 }
 
 const calendar = document.getElementById('calendar');
-        const calendarBody = document.getElementById('calendar-body');
-        const monthYear = document.getElementById('month-year');
-        const currentDate = new Date();
-        let currentMonth = currentDate.getMonth();
-        let currentYear = currentDate.getFullYear();
+const calendarBody = document.getElementById('calendar-body');
+const monthYear = document.getElementById('month-year');
+const currentDate = new Date();
+let currentMonth = currentDate.getMonth();
+let currentYear = currentDate.getFullYear();
 
-        // Función para crear el calendario
-        function generateCalendar(month, year) {
-          calendarBody.innerHTML = '';
-          const daysInMonth = new Date(year, month + 1, 0).getDate();
-          const firstDay = new Date(year, month, 1).getDay();
-      
-          const monthNames = [
-              "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-              "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
-          ];
-      
-          const monthName = monthNames[month]; // Obtener el nombre del mes en mayúscula
-          const capitalizedMonth = monthName.charAt(0).toUpperCase() + monthName.slice(1);
-      
-          monthYear.innerText = capitalizedMonth + ' ' + year;
-      
-          let dayCounter = 1;
-      
-          for (let week = 0; week < 6; week++) {
-              const row = document.createElement('tr');
-      
-              for (let day = 0; day < 7; day++) {
-                  const cell = document.createElement('td');
-      
-                  if (week === 0 && day < firstDay) {
-                      cell.textContent = '';
-                  } else if (dayCounter <= daysInMonth) {
-                      cell.textContent = dayCounter;
-      
-                      if (dayCounter === currentDate.getDate() && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
-                          cell.classList.add('current-month', 'today');
-                      }
-      
-                      dayCounter++;
-                  }
-      
-                  row.appendChild(cell);
-              }
-      
-              calendarBody.appendChild(row);
-          }
+// Función para crear el calendario
+function generateCalendar(month, year) {
+  calendarBody.innerHTML = '';
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const firstDay = new Date(year, month, 1).getDay();
+
+  const monthNames = [
+    "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+  ];
+
+  const monthName = monthNames[month];
+  const capitalizedMonth = monthName.charAt(0).toUpperCase() + monthName.slice(1);
+
+  monthYear.innerText = capitalizedMonth + ' ' + year;
+
+  let dayCounter = 1;
+
+  for (let week = 0; week < 6; week++) {
+    const row = document.createElement('tr');
+
+    for (let day = 0; day < 7; day++) {
+      const cell = document.createElement('td');
+
+      if (week === 0 && day < firstDay) {
+        cell.textContent = '';
+      } else if (dayCounter <= daysInMonth) {
+        cell.textContent = dayCounter;
+
+        if (dayCounter === currentDate.getDate() && month === currentDate.getMonth() && year === currentDate.getFullYear()) {
+          cell.classList.add('current-month', 'today');
+        }
+
+        dayCounter++;
       }
 
-        generateCalendar(currentMonth, currentYear);
+      row.appendChild(cell);
+    }
 
-        // Función para cambiar al mes anterior
-        function previousMonth() {
-            currentYear = currentMonth === 0 ? currentYear - 1 : currentYear;
-            currentMonth = currentMonth === 0 ? 11 : currentMonth - 1;
-            generateCalendar(currentMonth, currentYear);
+    calendarBody.appendChild(row);
+  }
+
+  // Llama a la función para marcar fechas de parciales
+  marcarFechasParciales();
+}
+
+generateCalendar(currentMonth, currentYear);
+
+// Función para cambiar al mes anterior
+function previousMonth() {
+  currentYear = currentMonth === 0 ? currentYear - 1 : currentYear;
+  currentMonth = currentMonth === 0 ? 11 : currentMonth - 1;
+  generateCalendar(currentMonth, currentYear);
+}
+
+// Función para cambiar al mes siguiente
+function nextMonth() {
+  currentYear = currentMonth === 11 ? currentYear + 1 : currentYear;
+  currentMonth = currentMonth === 11 ? 0 : currentMonth + 1;
+  generateCalendar(currentMonth, currentYear);
+}
+
+// Agregar eventos a los botones para cambiar de mes
+const previousButton = document.getElementById('previousMonth');
+previousButton.addEventListener('click', previousMonth);
+
+const nextButton = document.getElementById('nextMonth');
+nextButton.addEventListener('click', nextMonth);
+
+// Función para marcar las fechas de los parciales
+function marcarFechasParciales() {
+  const elementosFechaEvento = document.querySelectorAll('.fecha-evento');
+  elementosFechaEvento.forEach((elemento) => {
+    const fechaEvento = elemento.getAttribute('data-fecha');
+    const fechaPartes = fechaEvento.split('-');
+    const eventoYear = parseInt(fechaPartes[0], 10);
+    const eventoMonth = parseInt(fechaPartes[1], 10) - 1;
+    const eventoDay = parseInt(fechaPartes[2], 10);
+
+    if (eventoYear === currentYear && eventoMonth === currentMonth) {
+      const diaDelMes = eventoDay;
+      const celdasCalendario = calendarBody.querySelectorAll('td');
+
+      celdasCalendario.forEach((celda) => {
+        if (parseInt(celda.textContent) === diaDelMes) {
+          celda.classList.add('parciales-marcados');
         }
+      });
+    }
+  });
+}
 
-        // Función para cambiar al mes siguiente
-        function nextMonth() {
-            currentYear = currentMonth === 11 ? currentYear + 1 : currentYear;
-            currentMonth = currentMonth === 11 ? 0 : currentMonth + 1;
-            generateCalendar(currentMonth, currentYear);
-        }
-
-        // Agregar eventos a los botones para cambiar de mes
-        const previousButton = document.getElementById('previousMonth');
-        previousButton.addEventListener('click', previousMonth);
-
-        const nextButton = document.getElementById('nextMonth');
-        nextButton.addEventListener('click', nextMonth);

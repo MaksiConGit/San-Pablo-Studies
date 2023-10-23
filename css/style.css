@@ -253,3 +253,7 @@ table {
     justify-content: space-between;
     margin-bottom: 20px;
 }
+
+.parciales-marcados{
+    background-color: #3A3A3A;
+}
